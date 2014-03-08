@@ -6,6 +6,7 @@
 
 -[Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
+-[Odin Google Community](https://plus.google.com/u/0/communities/100013596437379837846)
 
 ---
 

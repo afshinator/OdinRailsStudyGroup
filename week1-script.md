@@ -10,10 +10,20 @@
 
 ---
 
-** Objectives **
+**Objectives**
 
-+ Provide value above and beyond what you'd get if you were to go through the material purely on your own.  
++ Main goal of this group is to provide value above and beyond what you'd get if you were to go through the material purely on your own.  
 
-+ We are NOT:
+	Let's leverage each other for teaming up, answering questions, and venting!
 
- Going over the reading in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
+	Use the Google Odin Community page to get in touch with other Odinators!
+
+	###### If you're into it, send me your email, I'll make a mail list so you can reach each other during the week
+
++ We are NOT going over the reading & projects in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
+
++ We ARE 
+
+	going to meet weekly, go over last weeks efforts, revise schedule if need be.
+
+	going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
