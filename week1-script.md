@@ -12,8 +12,8 @@
 
 ** Objectives **
 
-  Provide value above and beyond what you'd get if you were to go through the material purely on your own.  
++ Provide value above and beyond what you'd get if you were to go through the material purely on your own.  
 
 + We are NOT:
 
---* Going over the reading in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
+ Going over the reading in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
