@@ -1,8 +1,9 @@
-## The Odin Project's Ruby On Rails Study Group Repo 
+### The Odin Project's Ruby On Rails Study Group Repo 
 
-#### Transcripts, log, links, & misc materials from our meetings.
+##### Transcripts, log, links, & misc materials from our meetings.
 
 -[The Odin Project](theodinproject.com)
+
 -[Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
 
