@@ -18,7 +18,7 @@
 
 	Use the Google Odin Community page to get in touch with other Odinators!
 
-	###### If you're into it, send me your email, I'll make a mail list so you can reach each other during the week
+	###### If you're into it, send me your email, I'll make a mail list so you can reach each other during the week.
 
 + We are NOT going over the reading & projects in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
 
@@ -27,3 +27,8 @@
 	going to meet weekly, go over last weeks efforts, revise schedule if need be.
 
 	going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
+
+		Advice #1 : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming, you'll at best become good at building what the tutorials build and will lack the know-how to implement your own original ideas.
+
+		Advice #2 : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!).
+
