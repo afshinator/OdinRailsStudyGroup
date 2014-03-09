@@ -10,7 +10,7 @@
 
 ---
 
-**Objectives**
+#### Objectives
 
 + Main goal of this group is to provide value above and beyond what you'd get if you were to go through the material purely on your own.  
 
@@ -28,7 +28,28 @@
 
 	going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
 
-		Advice #1 : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming, you'll at best become good at building what the tutorials build and will lack the know-how to implement your own original ideas.
+	**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming, you'll at best become good at building what the tutorials build and will lack the know-how to implement your own original ideas.
 
-		Advice #2 : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!).
+	**Advice #2** : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!).
 
+
+#### Paraphrasing the [How This Course Will Work](http://www.theodinproject.com/courses/ruby-on-rails/lessons/how-this-course-will-work) section
+
++ This portion of the Odin curric will be the most build-heavy
++ You'll be asked to read docs, check out blog posts, watch videos, run marathons
++ Projects will be the major focus
++ Related/included technologies: HTTP, MVC, REST, APIs, Cookies and Authentication
+
++ Prerequisites - that section oulines installing, back-end secion of web dev 101, basic Ruby, Rails overview, and our first assignment!
+	Software installation - Necessary: Ruby, Rails, Git & Github account, eventually Heroku account
+
+	Installation is non-trivial and time-consuming.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
+
+	If you can't do the install, don't have time, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
+	Even if you're local dev environment is all set up, get an account here, you'll use it when group coding with others in this track and throughout Odin project efforts.
+
+
+
+
+
+	
