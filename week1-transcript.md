@@ -1,6 +1,6 @@
 ### Rails Study Group Week 1 Script
 
--[The Odin Project](theodinproject.com)
+-[The Odin Project](http://www.theodinproject.com)
 
 -[Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
@@ -68,6 +68,8 @@
 	**Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
 
 	**Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
+
+	#### Special Reading - [Setting up your Rails with TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
 
 
 + **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md)

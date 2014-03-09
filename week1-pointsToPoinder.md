@@ -37,19 +37,19 @@ gem/<br>
 
 **What are the gems that make up Rails?** - for [rails 4.0.3](https://rubygems.org/gems/rails),
 
-	*ActionMailer* - Allows you to send emails from your application.
+- *ActionMailer* - Allows you to send emails from your application.
 
-	*ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
+- *ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
 
-	*ActiveRecord* - Active Record is the M in MVC, the model; the layer of the system responsible for representing business data and logic.  The non-database functionality of Active Record is extracted out into ActiveModel (validations, ...).
+- *ActiveRecord* - Active Record is the M in MVC, the model; the layer of the system responsible for representing business data and logic.  The non-database functionality of Active Record is extracted out into ActiveModel (validations, ...).
 
-	*ActiveSupport* - Responsible for providing Ruby language extensions, utilities, & more.
+- *ActiveSupport* - Responsible for providing Ruby language extensions, utilities, & more.
 
-	*Bunder* - manages app dependecies
+- *Bunder* - manages app dependecies
 
-	*Railties* - Rails internals: application bootup, plugins, generators, and rake tasks..
+- *Railties* - Rails internals: application bootup, plugins, generators, and rake tasks..
 
-	*Sprockets-rails* - Sprockets concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS
+- *Sprockets-rails* - Sprockets concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS
 
 
 **What is the purpose of the gemfile?** - To define the gems you application will use, their versions and what environments they'll be used in (dev, test, deployment)
