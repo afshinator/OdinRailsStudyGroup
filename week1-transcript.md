@@ -1,12 +1,12 @@
-### Rails Study Group Week 1 Script
+### Rails Study Group Week 1 Transcript
 
--[The Odin Project](http://www.theodinproject.com)
+- [The Odin Project](http://www.theodinproject.com)
 
--[Study Group page on Odin](http://www.theodinproject.com/studygroup)
+- [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
--[Week 1 Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
+- [Week 1 Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
 
--TODO: link to recorded session
+- TODO: link to recorded session
 
 ---
 
@@ -81,7 +81,7 @@
 ---
 
 
-+ **Odds & Ends**
+#### **Odds & Ends**
 
 	- [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
