@@ -11,25 +11,25 @@
 
 ##### What is it?
 
-	**A sequence of characters that forms a search pattern, 
+**A sequence of characters that forms a search pattern,**
 
-	mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.**
+**mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.**
 
-	They are : 
+They are : 
 
 	- tremendously useful
 
- 	- everyone hates them, nobody knows how to use them
+	- everyone hates them, nobody knows how to use them
 
- 	- everbody who knows how to use them goes on to rule the universe!
+	- everbody who knows how to use them goes on to rule the universe!
 
- 	- They're *not* going away.  
+	- They're *not* going away.  
 
- 	- Regex syntax is reasonably standard between programming languages
+	- Regex syntax is reasonably standard between programming languages
 
- 	- There is no lack of string searching and pattern matching that you will do in your programming career.  Learn you some regexs and you'll be way ahead of the game.
+	- There is no lack of string searching and pattern matching that you will do in your programming career.  Learn you some regexs and you'll be way ahead of the game.
 
- 	- often abbreviated as regex, or regexp
+	- often abbreviated as regex, or regexp
 
 + The match operator =~ can be used to match a string against a regular expression. 
 
@@ -44,6 +44,7 @@
 %r{something}		
 Regexp.new("something")
 Regexp.compile("something")
+
 
 
 + Some simple examples
