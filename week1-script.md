@@ -66,17 +66,17 @@
 	Here is a typical gem structure:  [more info here](http://rubylearning.com/blog/2010/12/14/ruby-gems-%E2%80%94-what-why-and-how/)
 
 
-<code><br>
-gem/<br>
-|-- lib/<br>
-|   |-- gem.rb<br>
-|   |-- [and more]<br>
-|<br>
-|-- test/<br>
-|-- README<br>
-|-- Rakefile			            # scripts to help, build, test, debug the gem<br>
-|-- gem.gemspec			       # defines stuff like gem name, vers, platform, authors, email, repo page, summary, rubyforge_project name, other dependencies<br>
-</code>
+	<code><br>
+	gem/<br>
+	|-- lib/<br>
+	|   |-- gem.rb<br>
+	|   |-- [and more]<br>
+	|<br>
+	|-- test/<br>
+	|-- README<br>
+	|-- Rakefile			            # scripts to help, build, test, debug the gem<br>
+	|-- gem.gemspec			       # defines stuff like gem name, vers, platform, authors, email, repo page, summary, rubyforge_project name, other dependencies<br>
+	</code>
 
 
 	**What are the gems that make up Rails?**
