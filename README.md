@@ -2,7 +2,7 @@
 <img align="right" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
 ##### Transcripts, log, links, & misc materials from our meetings.
 
--[The Odin Project](theodinproject.com)
+-[The Odin Project](http://www.theodinproject.com)
 
 -[Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
