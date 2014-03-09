@@ -28,9 +28,9 @@
 
 	going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
 
-	**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming, you'll at best become good at building what the tutorials build and will lack the know-how to implement your own original ideas.
+	**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming in general, you'll at best become good at building what the tutorials build, and will lack the know-how to implement your own original ideas.
 
-	**Advice #2** : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!).
+	**Advice #2** : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  ( Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!). )
 
 
 #### Paraphrasing the [How This Course Will Work](http://www.theodinproject.com/courses/ruby-on-rails/lessons/how-this-course-will-work) section
@@ -40,14 +40,27 @@
 + Projects will be the major focus
 + Related/included technologies: HTTP, MVC, REST, APIs, Cookies and Authentication
 
-+ Prerequisites - that section oulines installing, back-end secion of web dev 101, basic Ruby, Rails overview, and our first assignment!
-	Software installation - Necessary: Ruby, Rails, Git & Github account, eventually Heroku account
++ **Prerequisites** - that section oulines installing, back-end secion of web dev 101, basic Ruby, Rails overview, and our first assignment!
 
-	Installation is non-trivial and time-consuming.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
+	Software installation - **Necessary stuff**: Ruby, Rails, Git & Github account, eventually Heroku account
 
-	If you can't do the install, don't have time, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
-	Even if you're local dev environment is all set up, get an account here, you'll use it when group coding with others in this track and throughout Odin project efforts.
+	Installation is non-trivial and time-consuming stuff.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
 
+	**If for whatever reason, you can't install Rails**, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
+
+	Even if your local dev environment is all set up, get a Nitrous account anyway, you'll use it when group coding with others in this track and throughout Odin project efforts.
+
++ The [Rails portion of the Web Dev 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics) section kicks off our Rails learning
+
+	Let's take a Quick tour of what has been done with Rails...
+	[Video with Hartl showing popular sites that run on Rails](http://www.youtube.com/watch?v=b_DJdmvBStE)
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=http://www.youtube.com/watch?v=b_DJdmvBStE
+" target="_blank"><img src="http://img.youtube.com/vi/http://www.youtube.com/watch?v=b_DJdmvBStE/0.jpg" 
+alt="Hartl on Rails" width="240" height="180" border="10" /></a>
+
+	(from 0:50 to ~2:45)
 
 
 
