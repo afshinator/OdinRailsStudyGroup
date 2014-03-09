@@ -1,5 +1,5 @@
 ### The Odin Project's Ruby On Rails Study Group 
-
+<img align="right" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
 ##### Transcripts, log, links, & misc materials from our meetings.
 
 -[The Odin Project](theodinproject.com)
@@ -10,7 +10,7 @@
 
 ---
 
-<img align="right" width="150" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
+
 
 1. Week 1 - Meet & greet, orientation, overview.
 
@@ -18,5 +18,3 @@
 [Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE),
 [transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md)
 
-
-![Ruby on Rails](http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png "Lets get on track!")
