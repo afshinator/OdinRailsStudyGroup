@@ -83,20 +83,20 @@
 
 + **Odds & Ends**
 
-	[astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
+	- [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
  	Good links to a variety of books, ...
 
  	He's a big proponent of learning Ruby first, and learning it well  (as opposed to Hartl's opinion)
  	
 
- 	[Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
+ 	- [Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
 
 
- 	[Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
+ 	- [Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
 
 
- 	[markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
+ 	- [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
 
- 	[dilinger.io](http://dillinger.io/) - It uses a different font than Github!  Otherwise useful.
+ 	- [dilinger.io](http://dillinger.io/) - It uses a different font than Github!  Otherwise useful.
 
