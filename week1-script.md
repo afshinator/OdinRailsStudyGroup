@@ -55,9 +55,11 @@
 + A **quick video tour** of what has been done with Rails... We'll just watch from 0:50 to ~2:45 in the hangout
 	[Video with Hartl showing popular sites that run on Rails](http://www.youtube.com/watch?v=b_DJdmvBStE)
 
+
 + **Points to ponder** - You'll learn this stuff in detail in the curric; let's do a once-over...
 
-	See week1.pointsToPonder.md
+	See [week1.pointsToPonder.md](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPoinder.md)
+
 
 + **Homework Possibilities** -- from least to most time consuming
 	
@@ -66,6 +68,9 @@
 	**Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
 
 	**Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
+
+
++ **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md)
 
 
 + **Odds & Ends**
@@ -81,8 +86,5 @@
 
 
  	[Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
- 	
- 	
 
-
-
+ 

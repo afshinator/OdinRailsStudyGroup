@@ -1,4 +1,4 @@
-## Regular Expressions - especially in Ruby
+## Regular Expressions 101
 
 #### From Week 1 Rails Study Group
 
@@ -31,11 +31,6 @@ They are :
 
 - often abbreviated as regex, or regexp
 
-+ The match operator =~ can be used to match a string against a regular expression. 
-
-+ If the pattern is found in the string, =~ returns its starting position, 
-	 	otherwise it returns nil.
-
 + Ruby provides several ways of initializing regular expressions. The following are all equivalent and create equivalent Regexp objects:
 
 
@@ -52,14 +47,33 @@ Regexp.compile("something")
 ```ruby
 	/Perl|Python/			# / delimits pattern, | separates things we're comparing
 
-	you can use parens like in math expressions
+	/P(erl|ython)/			# You can use parens like in math expressions, same pattern to match as above
 
-	/P(erl|ython)/			# same as above pattern
-
-	/ab+c/					# specifying repetitionon; a followed by 1 or more b's, followed by c
+	/ab+c/					# Specifying repetition on; 'a' followed by 1 or more 'b's, followed by 'c'
 	/ab*c/					# same as above, except 0 or more b's
 
-	/Perl\s+Python/			# \s whitespace (space, tab, newline), \d digit, \w character, . matches almost any characer
-							# so above is Perl, whitespace characters, then python
+	/Perl\s+Python/			# \s is whitespace (space, tab, newline), \d digit, \w character, . matches almost any characer
+							# so above is 'Perl', whitespace characters, then 'Python'
+```
 
++ The match operator =~ can be used to match a string against a regular expression. 
 
++ If the pattern is found in the string, =~ returns its starting position, 
+	 	otherwise it returns nil.
+
+```ruby
+if line =~ /Perl|Python/		# write msg if string contains perl or python
+	puts "Scripting language mentioned: #{line}"
+end	
+```
+
++ The part of a string matched by a regular expression can be replaced with different text using one of Ruby’s substitution methods.
+
+```ruby
+line.sub(/Perl/, 'Ruby') 	# replace first 'Perl' with 'Ruby'
+line.gsub(/Python/, 'Ruby') # replace every 'Python' with 'Ruby'
+```
+
+#### Tools
+- [https://www.debuggex.com/](https://www.debuggex.com/)
+- [http://www.rubular.com/](http://www.rubular.com/)
