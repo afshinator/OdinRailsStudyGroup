@@ -24,9 +24,9 @@
 
 + We ARE 
 
-	going to meet weekly, go over last weeks efforts, revise schedule if need be.
+	- going to meet weekly, go over last weeks efforts, revise schedule if need be.
 
-	going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
+	- going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
 
 	**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming in general, you'll at best become good at building what the tutorials build, and will lack the know-how to implement your own original ideas.
 
@@ -42,13 +42,13 @@
 
 + **Prerequisites** - that section oulines installing, back-end secion of web dev 101, basic Ruby, Rails overview, and our first assignment!
 
-	Software installation - **Necessary stuff**: Ruby, Rails, Git & Github account, eventually Heroku account
+	- Software installation - **Necessary stuff**: Ruby, Rails, Git & Github account, eventually Heroku account
 
-	Installation is non-trivial and time-consuming stuff.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
+	- Installation is non-trivial and time-consuming stuff.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
 
-	**If for whatever reason, you can't install Rails**, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
+	- **If for whatever reason, you can't install Rails**, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
 
-	Even if your local dev environment is all set up, get a Nitrous account anyway, you'll use it when group coding with others in this track and throughout Odin project efforts.
+	- Even if your local dev environment is all set up, get a Nitrous account anyway, you'll use it when group coding with others in this track and throughout Odin project efforts.
 
 #### The [Rails portion of the Web Dev 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics) section kicks off our Rails learning
 
@@ -85,9 +85,9 @@
 
 	- [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
- 	Good links to a variety of books, ...
+	-- Good links to a variety of books, ...
 
- 	He's a big proponent of learning Ruby first, and learning it well  (as opposed to Hartl's opinion)
+	-- He's a big proponent of learning Ruby first, and learning it well  (as opposed to Hartl's opinion)
  	
 
  	- [Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
