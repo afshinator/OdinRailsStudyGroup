@@ -65,6 +65,7 @@
 
 	Here is a typical gem structure:  [more info here](http://rubylearning.com/blog/2010/12/14/ruby-gems-%E2%80%94-what-why-and-how/)
 
+<code>
 gem/
 |-- lib/
 |   |-- gem.rb
@@ -74,10 +75,10 @@ gem/
 |-- README
 |-- Rakefile			# scripts to help, build, test, debug the gem
 |-- gem.gemspec			# defines stuff like gem name, vers, platform, authors, email, repo page, summary, rubyforge_project name, other dependencies
-
+</code>
 
 	**What are the gems that make up Rails?**
-	
+
 	for [rails 4.0.3](https://rubygems.org/gems/rails), 
 	*ActionMailer* - Allows you to send emails from your application.
 	*ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
