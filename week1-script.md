@@ -50,18 +50,48 @@
 
 	Even if your local dev environment is all set up, get a Nitrous account anyway, you'll use it when group coding with others in this track and throughout Odin project efforts.
 
-+ The [Rails portion of the Web Dev 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics) section kicks off our Rails learning
+#### The [Rails portion of the Web Dev 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics) section kicks off our Rails learning
 
-	Let's take a Quick tour of what has been done with Rails...
++ A **quick video tour** of what has been done with Rails... We'll just watch from 0:50 to ~2:45 in the hangout
 	[Video with Hartl showing popular sites that run on Rails](http://www.youtube.com/watch?v=b_DJdmvBStE)
 
++ **Points to ponder** - You'll learn this stuff in detail in the curric; let's do a once-over...
 
-<a href="http://www.youtube.com/watch?v=b_DJdmvBStE
-" target="_blank"></a>
+	**What is Rails?** - An open source web application framework that's buit using Ruby. It is a full-stack framework: it allows creating pages and applications that gather information from the web server, talk to or query the database, and render templates to the browser.
 
-	(from 0:50 to ~2:45)
+	**What language is Rails written in?** - Ruby.  But since it also interfaces with the database and serves web pages, we have SQL, HTML, CSS, Javascript, and related technologies in the mix.
+
+	**What are Ruby gems?** - Basically a packaged ruby application or library; comes stamped with a name and a version.  You use them to extend or change the functionality in Ruby applications.
+
+	Here is a typical gem structure:  [more info here](http://rubylearning.com/blog/2010/12/14/ruby-gems-%E2%80%94-what-why-and-how/)
+
+gem/
+|-- lib/
+|   |-- gem.rb
+|   |-- [and more]
+|
+|-- test/
+|-- README
+|-- Rakefile			# scripts to help, build, test, debug the gem
+|-- gem.gemspec			# defines stuff like gem name, vers, platform, authors, email, repo page, summary, rubyforge_project name, other dependencies
 
 
-
-
+	**What are the gems that make up Rails?**
 	
+	for [rails 4.0.3](https://rubygems.org/gems/rails), 
+	*ActionMailer* - Allows you to send emails from your application.
+	*ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
+	*ActiveRecord* - Active Record is the M in MVC, the model; the layer of the system responsible for representing business data and logic.  The non-database functionality of Active Record is extracted out into ActiveModel (validations, ...).
+	*ActiveSupport* - Responsible for providing Ruby language extensions, utilities, & more.
+	*bunder* - manages app dependecies
+	*Railties* - Rails internals: application bootup, plugins, generators, and rake tasks..
+	*sprockets-rails* - Sprockets concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS
+
+
+	**What is the purpose of the gemfile?**
+
+	To define the gems you application will use, their versions and what environments they'll be used in (dev, test, depolyment)
+
+	**What is the command to create a new Rails app from the command line?**
+
+	rails new appname	
