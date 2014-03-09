@@ -1,4 +1,4 @@
-### Regular Expressions - especially in Ruby
+## Regular Expressions - especially in Ruby
 
 #### From Week 1 Rails Study Group
 
@@ -9,7 +9,7 @@
 
 ---
 
-##### What is it?
+#### What is it?
 
 **A sequence of characters that forms a search pattern,**
 
@@ -17,19 +17,19 @@
 
 They are : 
 
-	- tremendously useful
+- tremendously useful
 
-	- everyone hates them, nobody knows how to use them
+- everyone hates them, nobody knows how to use them
 
-	- everbody who knows how to use them goes on to rule the universe!
+- everbody who knows how to use them goes on to rule the universe!
 
-	- They're *not* going away.  
+- They're *not* going away.  
 
-	- Regex syntax is reasonably standard between programming languages
+- Regex syntax is reasonably standard between programming languages
 
-	- There is no lack of string searching and pattern matching that you will do in your programming career.  Learn you some regexs and you'll be way ahead of the game.
+- There is no lack of string searching and pattern matching that you will do in your programming career.  Learn you some regexs and you'll be way ahead of the game.
 
-	- often abbreviated as regex, or regexp
+- often abbreviated as regex, or regexp
 
 + The match operator =~ can be used to match a string against a regular expression. 
 
@@ -44,7 +44,7 @@ They are :
 %r{something}		
 Regexp.new("something")
 Regexp.compile("something")
-
+```
 
 
 + Some simple examples
