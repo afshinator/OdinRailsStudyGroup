@@ -73,6 +73,9 @@
 + **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md)
 
 
+---
+
+
 + **Odds & Ends**
 
 	[astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
@@ -87,4 +90,8 @@
 
  	[Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
 
- 
+
+ 	[markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
+
+ 	[dilinger.io](http://dillinger.io/) - It uses a different font than Github!  Otherwise useful.
+

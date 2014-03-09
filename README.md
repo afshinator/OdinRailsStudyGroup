@@ -15,3 +15,6 @@
 ..* Sun, March 16th, 7:30pm PDT, 
 [Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE),
 [transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md)
+
+
+![Ruby on Rails](http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png "Lets get on track!")
