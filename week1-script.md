@@ -55,12 +55,9 @@
 	Let's take a Quick tour of what has been done with Rails...
 	[Video with Hartl showing popular sites that run on Rails](http://www.youtube.com/watch?v=b_DJdmvBStE)
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/http://www.youtube.com/watch?v=b_DJdmvBStE/0.jpg)](http://www.youtube.com/watch?v=b_DJdmvBStE)
 
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=http://www.youtube.com/watch?v=b_DJdmvBStE
-" target="_blank"><img src="http://img.youtube.com/vi/http://www.youtube.com/watch?v=b_DJdmvBStE/0.jpg" 
-alt="Hartl on Rails" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?v=b_DJdmvBStE
+" target="_blank"></a>
 
 	(from 0:50 to ~2:45)
 
