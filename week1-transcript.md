@@ -63,13 +63,16 @@
 
 + **Homework Possibilities** -- from least to most time consuming
 	
-	**Hartl's Tutorial - Chpt 2** [Scaffold app](http://ruby.railstutorial.org/chapters/a-demo-app#top)
+	- **Hartl's Tutorial - Chpt 2** [Scaffold app](http://ruby.railstutorial.org/chapters/a-demo-app#top)
 
-	**Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
+	- **Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
 
-	**Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
+	- **Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
 
-	#### Special Reading - [Setting up your Rails with TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
+
+	##### Add [annotate_models gem](https://github.com/ctran/annotate_models) to whichever one we do.
+
+	##### Special Reading - [Setting up your Rails with TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
 
 
 + **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md)
