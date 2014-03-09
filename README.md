@@ -1,5 +1,5 @@
 ### The Odin Project's Ruby On Rails Study Group 
-<img align="right" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
+<img align="right" width="150" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
 ##### Transcripts, log, links, & misc materials from our meetings.
 
 -[The Odin Project](http://www.theodinproject.com)
