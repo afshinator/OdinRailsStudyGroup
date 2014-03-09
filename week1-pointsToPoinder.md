@@ -1,6 +1,10 @@
 ### Ruby on Rails Points to Ponder 
 
-#### You'll learn this stuff in detail while going through the curriculum; let's do a once-over...
+#### Week 1 Notes
+
+See Odin Project >> Web Development 101 >> Web Devevelopment Frameworks >> 2: Ruby on Rails Basics : [Ruby on Rails 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics), halfway down the page.
+
+##### You'll learn this stuff in detail while going through the curriculum; let's do a once-over now so you're ahead of the game
 
 
 -[Week 1 Script](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-script.md)
