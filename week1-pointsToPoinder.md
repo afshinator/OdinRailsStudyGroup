@@ -5,7 +5,7 @@
 See Odin Project >> Web Development 101 >> Web Devevelopment Frameworks >> 2: Ruby on Rails Basics : [Ruby on Rails 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics), halfway down the page.
 
 
--[Week 1 Script](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-script.md)
+-[Week 1 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-script.md)
 
 -[Week 1 Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
 

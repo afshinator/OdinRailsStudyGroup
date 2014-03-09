@@ -11,9 +11,9 @@
 
 #### What is it?
 
-**A sequence of characters that forms a search pattern,**
+- **A sequence of characters that forms a search pattern,**
 
-**mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.**
+- **Mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.**
 
 They are : 
 
@@ -62,7 +62,7 @@ Regexp.compile("something")
 	 	otherwise it returns nil.
 
 ```ruby
-if line =~ /Perl|Python/		# write msg if string contains perl or python
+if line =~ /Perl|Python/		# write msg if line contains perl or python
 	puts "Scripting language mentioned: #{line}"
 end	
 ```
