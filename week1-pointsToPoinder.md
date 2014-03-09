@@ -1,10 +1,8 @@
 ### Ruby on Rails Points to Ponder 
 
-#### Week 1 Notes
+#### From Week 1 Rails Study Group
 
 See Odin Project >> Web Development 101 >> Web Devevelopment Frameworks >> 2: Ruby on Rails Basics : [Ruby on Rails 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics), halfway down the page.
-
-##### You'll learn this stuff in detail while going through the curriculum; let's do a once-over now so you're ahead of the game
 
 
 -[Week 1 Script](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-script.md)
@@ -13,6 +11,7 @@ See Odin Project >> Web Development 101 >> Web Devevelopment Frameworks >> 2: Ru
 
 ---
 
+##### You'll learn this stuff in detail while going through the curriculum; let's do a once-over now so you're ahead of the game
 
 **What is Rails?** - An open source web application framework that's buit using Ruby. It is a full-stack framework: it allows creating pages and applications that gather information from the web server, talk to or query the database, and render templates to the browser.
 
@@ -36,9 +35,8 @@ gem/<br>
 </code>
 
 
-**What are the gems that make up Rails?**
+**What are the gems that make up Rails?** - for [rails 4.0.3](https://rubygems.org/gems/rails),
 
-for [rails 4.0.3](https://rubygems.org/gems/rails), 
 *ActionMailer* - Allows you to send emails from your application.
 
 *ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
@@ -54,7 +52,7 @@ for [rails 4.0.3](https://rubygems.org/gems/rails),
 *Sprockets-rails* - Sprockets concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS
 
 
-**What is the purpose of the gemfile?** - To define the gems you application will use, their versions and what environments they'll be used in (dev, test, depolyment)
+**What is the purpose of the gemfile?** - To define the gems you application will use, their versions and what environments they'll be used in (dev, test, deployment)
 
 
 **What is the command to create a new Rails app from the command line?** - 	rails new appname
@@ -76,7 +74,7 @@ for [rails 4.0.3](https://rubygems.org/gems/rails),
 
 + GET reqs shouldnt be used for sensitive data, have length restriction, should only be used to retrieve data
 
-+POST reqs have no restrictions on data length
++ POST reqs have no restrictions on data length
 
 ###### Other HTTP Request Methods:
 

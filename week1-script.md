@@ -59,5 +59,30 @@
 
 	See week1.pointsToPonder.md
 
++ **Homework Possibilities** -- from least to most time consuming
+	
+	**Hartl's Tutorial - Chpt 2** [Scaffold app](http://ruby.railstutorial.org/chapters/a-demo-app#top)
+
+	**Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
+
+	**Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
+
+
++ **Odds & Ends**
+
+	[astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
+
+ 	Good links to a variety of books, ...
+
+ 	He's a big proponent of learning Ruby first, and learning it well  (as opposed to Hartl's opinion)
+ 	
+
+ 	[Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
+
+
+ 	[Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
+ 	
+ 	
+
 
 
