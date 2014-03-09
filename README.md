@@ -10,6 +10,8 @@
 
 ---
 
+<img align="right" width="150" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
+
 1. Week 1 - Meet & greet, orientation, overview.
 
 ..* Sun, March 16th, 7:30pm PDT, 
