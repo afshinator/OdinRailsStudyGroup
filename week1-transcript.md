@@ -83,6 +83,7 @@
 
 #### **Odds & Ends**
 
+
 	- [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
 	-- Good links to a variety of books, ...
