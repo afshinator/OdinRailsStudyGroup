@@ -12,4 +12,6 @@
 
 1. Week 1 - Meet & greet, orientation, overview.
 
-..* Sun, March 16th, 7:30pm PDT, [Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
+..* Sun, March 16th, 7:30pm PDT, 
+[Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE),
+[transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md)

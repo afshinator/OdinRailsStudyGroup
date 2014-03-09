@@ -3,7 +3,7 @@
 #### From Week 1 Rails Study Group
 
 
--[Week 1 Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-script.md)
+-[Week 1 Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md)
 
 -[Week 1 Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
 
