@@ -4,9 +4,7 @@
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-- [Week 1 Google Hangout](https://plus.google.com/u/0/events/cot10jfo8isvp486c9vkut2t33s?authkey=CNvcqOHw37W61AE)
-
-- TODO: link to recorded session
+- [Week 1 Hangout Video](http://www.youtube.com/watch?v=5GcvIf-sFe4)
 
 ---
 
