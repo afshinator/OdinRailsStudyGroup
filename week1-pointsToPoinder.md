@@ -39,44 +39,44 @@ gem/<br>
 
 - *ActionMailer* - Allows you to send emails from your application.
 
-- *ActionPack* -  the Controller and View layers are handled together by Action Pack. These two layers are bundled in a single package due to their heavy interdependence.
+- *ActionPack* -  Handles the Controller and View layers of your app. These two layers are bundled in a single package due to their heavy interdependence.
 
-- *ActiveRecord* - Active Record is the M in MVC, the model; the layer of the system responsible for representing business data and logic.  The non-database functionality of Active Record is extracted out into ActiveModel (validations, ...).
+- *ActiveRecord* - Active Record is the M in MVC, the model; the layer of the system responsible for representing business data and logic.  ( The non-database functionality of Active Record is extracted out into ActiveModel (validations, ...).
 
 - *ActiveSupport* - Responsible for providing Ruby language extensions, utilities, & more.
 
-- *Bunder* - manages app dependecies
+- *Bundler* - manages app dependecies
 
 - *Railties* - Rails internals: application bootup, plugins, generators, and rake tasks..
 
 - *Sprockets-rails* - Sprockets concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS
 
 
-**What is the purpose of the gemfile?** - To define the gems you application will use, their versions and what environments they'll be used in (dev, test, deployment)
+**What is the purpose of the gemfile?** - To define the gems your application will use, their versions and what environments they'll be used in (dev, test, deployment)
 
 
 **What is the command to create a new Rails app from the command line?** - 	rails new appname
 
 **How is a GET request different from a POST request?** 
-	[ what is HTTP ?: a protocol for data communication on the web]
+	[what is HTTP ? it's a protocol for data communication on the web]
 
-+ Both are HTTP request methods,
++ Both are HTTP request methods, but
 
-+ GET - Requests data from a specified resource, query strings (name/value pairs) is sent in the URL of a GET request
++ GET - Requests data from a specified resource; query strings (name/value pairs) is sent in the URL of a GET request
 
-+ POST - Submits data to be processed to a specified resource, query strings (name/value pairs) is sent in the HTTP message body of a POST request		
++ POST - Submits data to be processed to a specified resource; query strings (name/value pairs) sent in the HTTP message body of a POST request		
 
-+ GET requests can be cached, POST are never cached
++ GET requests can be cached; POST are never cached
 
-+ GET requests stay in the browser history, POST do not remain in browser history
++ GET requests stay in the browser history; POST do not remain in browser history
 
-+ GET reqs can be bookmarked, POST reqs cannot
++ GET reqs can be bookmarked; POST reqs cannot
 
 + GET reqs shouldnt be used for sensitive data, have length restriction, should only be used to retrieve data
 
 + POST reqs have no restrictions on data length
 
-	###### Other HTTP Request Methods:
+	###### FYI, Here are the other possible HTTP Request Methods:
 
 	-HEAD - same as GET but returns only headers & status line, no document body
 
@@ -90,13 +90,13 @@ gem/<br>
 
 	-TRACE - for testing, echo back what was sent
 
-+ **What is CRUD?** - Your application consists of resources - A resource  is the term used for a collection of similar objects, such as articles, people or animals. You can create, read, update and destroy items for a resource and these operations are referred to as CRUD operations
++ **What is CRUD?** - The operations you run can run on your 'resources'.  A resource is the term used for a collection of similar objects in your app, such as articles, people or animals. You can Create, Read, Update and Destroy items for a resource, and these operations are referred to as CRUD operations.
 
-+ **What is REST?** - REpresentation State Transfer; an architecture style for designing networked applications. 
++ **What is REST?** - REpresentational State Transfer; an communication protocol architecture style for designing networked applications. 
 
-	RESTful applications use HTTP requests to post data (create and/or update), read data (e.g., make queries), and delete data. Thus, REST uses HTTP for all four CRUD (Create/Read/Update/Delete) operations.  REST is simple and easy to implement.  
+	RESTful applications use HTTP requests to post data (create and/or update), read data (e.g., make queries), and delete data. So, REST uses HTTP for all four CRUD (Create/Read/Update/Delete) operations.  
 
-+ **What is RESTful Routing?** - Instead of relying exclusively on the URL to indicate what webpage you want to go to, it's a combination of URL + a VERB. So, he same URL used with a different verb (either GET, PUT, POST, DELETE) will get you to a different page. This makes for clean, short URLs, and is particularly adapted to CRUD applications.
++ **What is RESTful Routing?** - Instead of relying exclusively on the URL to indicate what webpage you want to go to, it's a combination of URL + a VERB. So, the same URL used with a different verb (either GET, PUT, POST, DELETE) will get you to a different page. This makes for clean, short URLs, and is particularly adapted to CRUD applications.
 
 + **What is MVC?** - An app architecture / software pattern that divides an app into 3 interconnected parts; its aim is to separate internal represenation of info from ways that that data is presented to user.
 
@@ -113,3 +113,5 @@ gem/<br>
 	*View* - Outputs the HTML, triggered by a controller's decision to present the data. 
 
 	*Controller* - The part/objects of a rails app that directs traffic; queries the models for specific data, and organizes that data (searching, sorting, massaging it) into a form that fits the needs of a given view.
+
+	Check here for [more details with a nice visual](http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/).

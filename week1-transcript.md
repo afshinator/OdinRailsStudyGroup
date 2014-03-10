@@ -72,10 +72,10 @@
 
 	##### Add [annotate_models gem](https://github.com/ctran/annotate_models) to whichever one we do.
 
-	##### Special Reading - [Setting up your Rails with TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
+	##### Special Reading - [Setting up a Rails app for TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
 
 
-+ **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md)
++ **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md); embrace the pain.
 
 
 ---
@@ -93,9 +93,7 @@
 
 - [Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
 
-
 - [Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
-
 
 - [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
 
