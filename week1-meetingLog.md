@@ -35,12 +35,14 @@ Everybody who showed up has done at least a few chapters in Hartl.  No total noo
 
 - Bottom part of [the transcript for this week](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md) has a few items I forgot to go over.
 
+- Check this file for updates during the week.
+
 
 #### Next week  
 
 - Go over projects assigned
 
-- Depends on presence of noobs, review [points to ponder](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPoinder.md) again with more clarity around HTTP requests and how they work.
+- Depends on presence of noobs, review [points to ponder](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md) again with more clarity around HTTP requests and how they work.
 
 - ?? suggestions ??  mail me!
 

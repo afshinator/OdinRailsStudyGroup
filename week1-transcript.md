@@ -1,99 +1,126 @@
-### Rails Study Group Week 1 Transcript
+### Rails Study Group Week 2 Transcript
 
 - [The Odin Project](http://www.theodinproject.com)
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-- [Week 1 Hangout Video](http://www.youtube.com/watch?v=5GcvIf-sFe4)
+- [Week 2 Hangout Video]()
 
 ---
 
-#### Objectives
+### What is the Odin Project?  
+// Show screenshot of Odin home page.
+- **A free on-line resource for learning web development**, uses 2 methods:
 
-+ Main goal of this group is to provide value above and beyond what you'd get if you were to go through the material purely on your own.  
+    1. The website provides an extended curriculum that covers learning web development through primarily
+    free on-line resources.  It covers the range of things you need to know as a software developer
+    working on web technologies, from the technical details of front-end and back-end coding, to HTTP,
+	to career advice, and more.  Its focus is on programming; specifically Ruby and the Rails framework
+	on the back-end, and Browser and Javascript related technologies on the front.
 
-	Let's leverage each other for teaming up, answering questions, and venting!
+	2. The website itself is a Rails app and an open source project, and is constantly evolving with the
+	help of students, and of course direction from the founder/developer of the site 
+	[Erik Trautman]().
 
-	Use the Google Odin Community page to get in touch with other Odinators!
-
-	###### If you're into it, send me your email, I'll make a mail list so you can reach each other during the week.
-
-+ We are NOT going over the reading & projects in the hangout as if I'm teaching it.  You're going to have to do all the reading on your own.  However, I encourage x amount of group coding on the projects especially if you're stuck.
-
-+ We ARE 
-
-	- going to meet weekly, go over last weeks efforts, revise schedule if need be.
-
-	- going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
-
-	<a name="advice"></a>**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming in general, you'll at best become good at building what the tutorials build, and will lack the know-how to implement your own original ideas.
-
-	**Advice #2** : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  ( Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!). )
+	We use agile inspired methodology to run sprints to implement speced out features, often pairing or 
+	in a group, to write test-driven code.  You get to exercise what you learn in the curriculum in a 
+	real production app - you can see your work on line literally the next day. See the 
+	[Contribution Page on Odin](http://www.theodinproject.com/contributing).
 
 
-#### Paraphrasing the [How This Course Will Work](http://www.theodinproject.com/courses/ruby-on-rails/lessons/how-this-course-will-work) section
+### We are here to learn **Ruby on Rails**
+// Show screenshot of [Rails section of Odin](http://www.theodinproject.com/courses/ruby-on-rails/lessons)
+- We want to take a deep dive so that we can implement our own apps.  No one tutorial can go in as deep as we need; not even Hartl's.  We have to use a variety of resources, over a range of time.
 
-+ This portion of the Odin curric will be the most build-heavy
-+ You'll be asked to read docs, check out blog posts, watch videos, run marathons
-+ Projects will be the major focus
-+ Related/included technologies: HTTP, MVC, REST, APIs, Cookies and Authentication
+- Our knowledge & learning of Rails will go in ever-increasing concentric circles where we cover the same material over and over again from different angles, each time getting a bigger understanding of the picture.  
 
-+ **Prerequisites** - that section oulines installing, back-end secion of web dev 101, basic Ruby, Rails overview, and our first assignment!
+	So really, we're here to learn Rails and all the periphery technology that it entails.
 
-	- Software installation - **Necessary stuff**: Ruby, Rails, Git & Github account, eventually Heroku account
-
-	- Installation is non-trivial and time-consuming stuff.  [InstallFest](http://www.theodinproject.com/courses/web-development-101/lessons/installations) 
-
-	- **If for whatever reason, you can't install Rails**, you can use online IDE's, our weapon of choice at this time: [Nitrous.io](https://www.nitrous.io/)
-
-	- Even if your local dev environment is all set up, get a Nitrous account anyway, you'll use it when group coding with others in this track and throughout Odin project efforts.
-
-#### The [Rails portion of the Web Dev 101](http://www.theodinproject.com/courses/web-development-101/lessons/ruby-on-rails-basics) section kicks off our Rails learning
-
-+ A **quick video tour** of what has been done with Rails... We'll just watch from 0:50 to ~2:45 in the hangout
-	[Video with Hartl showing popular sites that run on Rails](http://www.youtube.com/watch?v=b_DJdmvBStE)
+- Week 1 had a scheduling snafu! All the participants were advanced beginners; most are already experienced students of Odin's curriculum.  
 
 
-+ **Points to ponder** - You'll learn this stuff in detail in the curric; let's do a once-over...
-
-	See [week1.pointsToPonder.md](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPoinder.md)
-
-
-+ **Homework Possibilities** -- from least to most time consuming
+### What are the skill levels of the participants this week?
+// How many people of each of are there?
 	
-	- **Hartl's Tutorial - Chpt 2** [Scaffold app](http://ruby.railstutorial.org/chapters/a-demo-app#top)
+- I expect some total beginners, a few I've-done-a-tutorials, and maybe a couple of intermediates.
 
-	- **Ruby On Rails Guides:** [Getting Started](http://guides.rubyonrails.org/getting_started.html)	
+- Total Noobs, especially those who havent read the 
+	[How this Course Will Work](http://www.theodinproject.com/courses/ruby-on-rails/lessons/how-this-course-will-work)
+	need to do so to cover the pre-reqs to get the most out of our efforts.  You can follow along at will, but you might hurt from lack of programming/Ruby knowledge that you get from earlier course material.
 
-	- **Blogger 2** [Jumpstart Lab project](http://tutorials.jumpstartlab.com/projects/blogger.html)
+- Hope-fully some have rails installed and have at least started a tutorial, know some rails.  They need to 
+	read the How this course will work, and finish Hartl's Chpt 2.  Do Rails Guides' and Blogger2 tutorials.
 
-
-	##### Add [annotate_models gem](https://github.com/ctran/annotate_models) to whichever one we do.
-
-	##### Special Reading - [Setting up a Rails app for TDD](http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit) Article
-
-
-+ **Regexps** -- [Regular Expressions](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-regex.md); embrace the pain.
+- Folks from last week are all at least advanced beginners. Hang tight, I'll address you guy specifically a little later.
 
 
----
+
+### Identify Your Group to know which assignments to do...
+// I'm assuming there's going to be a split between these two types...
+
+#### You're a Beginner if ...
+
+- Have not coded much in Ruby at all / Have done less than 7 chapters in Hartl / Don't know the difference between client and server / don't know difference between HTTP and MVC / ...
 
 
-#### **Odds & Ends**
+#### You're an Advanced Beginner if ...
+
+- Even though you have to look up specifics, you're comfortable with Ruby / You've completed either the Rails Guide's Getting Started tutorial or JumpStart Lab Blogger2, or at least 6 chapters in Hartl / ...
 
 
-- [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
-	Good links to a variety of books, ...
+### Any questions on Installation, Rails in general, Nitrous, ... ?
+// Pull up a logged in session of Nitrous, show code editor, ...
+- Quick explanation of how Nitrous is nice for collaboration efforts;
 
-	He's a big proponent of learning Ruby first, and learning it well  (as opposed to Hartl's opinion)
-	
+- Get a GitHub account asap.  
 
-- [Free audiocast I'd like to find out about](http://www.buildingwebapps.com/learningrails) - any takers?
+- Read [my advice from last week](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md#advice).
 
-- [Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
+### Time for this weeks [**Points to Ponder**](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md)
 
-- [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
 
-- [dilinger.io](http://dillinger.io/) - It uses a different font than Github!  Otherwise useful.
+### This weeks assignment for Beginners
 
+- Read [How this Course Will Work](http://www.theodinproject.com/courses/ruby-on-rails/lessons/how-this-course-will-work)
+    to get oriented and understand the prep-work you should cover.
+
+- Read [Last week's transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md),
+ it includes what was covered, links, ... 
+
+    I comment about how you *do* really need to have Ruby knowledge for Rails. So at minimum, ...
+    
+    **Do [Learn To Program](https://pine.fm/LearnToProgram/)**, chapter 1 - 10.  It's quick, it'll raise your understanding of Ruby.  Also this synchronizes you with the Odin Wed Dev 101 study group if you care to jump in there as well.
+    
+    Do chapters 1 & 2 of [Hartl's Tutorial](http://ruby.railstutorial.org/ruby-on-rails-tutorial-book); gets your feet wet.  You can skip the material on installation if you're already set up.
+    
+    If you're finished with these already, do [last weeks assignments]().
+
+
+
+### Let's [go over last weeks assignment]()
+
+
+
+### This weeks assignment for Advanced Beginners
+
+- We've all done at least a bunch of chapters in Hartl... What do you think is the hardest stuff to learn?
+
+	Testing (syntax, what to test, what not to test, when to test)
+
+	Associations
+
+	what else??
+
+- Let's get well grounded in testing and RSpec. Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and **Do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
+	The goal of this exercise is to get comfortable with RSpec.  We're taken out of the context of Rails and left to deal with just spec-driven Ruby.
+
+	After you finish, read this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
+
+- Kick off our Hartl efforts.  Do chapters 1 & 2.  After you finish chpt 2, think about what tests you would
+write.
+
+
+
+
+    
