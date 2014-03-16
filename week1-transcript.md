@@ -25,7 +25,7 @@
 	- going to meet weekly, go over last weeks efforts, revise schedule if need be.
 
 	- going to use my experience / hear my opinions around learning Rails, Ruby, & CS in general - hopefully to your benefit.
-
+<a name="advice"></a>
 	**Advice #1** : Hartl is of the opinion that you can learn Rails w/o much understanding of Ruby.  My observation is that without knowledge & experience of 1. Ruby, 2. Programming in general, you'll at best become good at building what the tutorials build, and will lack the know-how to implement your own original ideas.
 
 	**Advice #2** : While following the tutorials, embrace the side projects like getting up to speed in github, getting on Heroku & deploying often.  ( Lack of Github skills will continuously hinder you.   Heroku deployment is simple but can also be a land-mine (asset issues!). )
