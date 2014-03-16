@@ -2,13 +2,13 @@
 <img align="right" width="250" src="http://res.cloudinary.com/techblogpics/image/upload/v1393811171/rubyonrails-fade3_lv4xao.png">
 ##### Transcripts, log, links, & misc materials from our meetings.
 
-######[The Odin Project](http://www.theodinproject.com)
+######-[The Odin Project](http://www.theodinproject.com)
 
-######[Study Group page on Odin](http://www.theodinproject.com/studygroup)
+######-[Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-######[Odin Google Community](https://plus.google.com/u/0/communities/100013596437379837846)
+######-[Odin Google Community](https://plus.google.com/u/0/communities/100013596437379837846)
 
-######[This study group on Google](https://plus.google.com/u/0/b/112041900311777032328/112041900311777032328/posts)
+######-[This study group on Google](https://plus.google.com/u/0/b/112041900311777032328/112041900311777032328/posts)
 
 ---
 
