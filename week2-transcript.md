@@ -73,7 +73,7 @@
 
 ### Any questions on Installation, Rails in general, Nitrous, ... ?
 // Pull up a logged in session of Nitrous, show code editor, ...
-- Quick explanation of how Nitrous is nice for collaboration efforts;
+- Quick explanation of how Nitrous is nice for collaboration efforts. There's also Koding, Codebox, and more - haven't explored those yet but would like to.
 
 - Get a GitHub account asap.  
 
@@ -83,7 +83,7 @@
 ### Time for this weeks [**Points to Ponder**]()
 // go over *Why Rails?* from this weeks points
 
-// might want to over [week1 points](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md) based on audience, esp stuff around CRUD, REST, HTTP, but skip GET & POST
+// might want to go over [week1 points](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md) based on audience, skip GET & POST because [HTTP points](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-HTTP.md) covers it.
 
 
 
@@ -132,15 +132,25 @@
 
 	what else??
 
-- Let's get well grounded in testing and RSpec. Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and **do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
+- Let's get well grounded in testing and RSpec. 
+
+#### Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and
+
+#### **do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
+
 	The goal of this exercise is to get comfortable with RSpec.  We're taken out of the context of Rails and left to deal with just spec-driven Ruby.
 
-	After you finish, read this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
+	After you finish, 
 
-- **Kick off our Hartl efforts.  Do chapters 1 & 2**.  After you finish chpt 2, think about what tests you would
-write.
+#### read this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
 
+#### Do [chapters 1 & 2 of Hartl](http://ruby.railstutorial.org/)
 
+	After you finish chpt 2, think about what tests you would write.
+
+#### Read [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications) from *thoughtbot*
+
+#### Look at and use the [simplecov gem](https://github.com/colszowka/simplecov) - Its a [code coverage](http://stackoverflow.com/questions/1158518/what-is-code-coverage) tool.
 
 
     
