@@ -132,12 +132,12 @@
 
 	what else??
 
-- Let's get well grounded in testing and RSpec. Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and **Do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
+- Let's get well grounded in testing and RSpec. Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and **do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
 	The goal of this exercise is to get comfortable with RSpec.  We're taken out of the context of Rails and left to deal with just spec-driven Ruby.
 
 	After you finish, read this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
 
-- Kick off our Hartl efforts.  Do chapters 1 & 2.  After you finish chpt 2, think about what tests you would
+- **Kick off our Hartl efforts.  Do chapters 1 & 2**.  After you finish chpt 2, think about what tests you would
 write.
 
 

@@ -3,9 +3,9 @@
 #### From Week 2 Rails Study Group
 
 
--[Week 2 transcript]()
+-[Week 2 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-transcript.md)
 
--[Week 2 Hangout Video]()
+-[Week 2 Hangout Video - coming soon]()
 
 
 ---
@@ -23,7 +23,7 @@
  
     Express.js is a web application server that runs on Node.  It has yet to take over the world... however,
 
-	*Node.js* shines in real-time web applications employing push technology over websockets. Why is that interesting? For over 20 years we've had this stateless-web based on the paradigm of the stateless request-response architecture (like REST); Node web applications can have real-time, two-way connections, where either the client or server can initiate communication, allowing them to exchange data at will. This is in contrast to the typical web response paradigm, where the client always initiates communication. Additionally, it’s all based on the open web stack (HTML, CSS and JS)... [read more](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
+	*Node.js* shines in real-time web applications employing push technology over websockets. Why is that interesting? For over 20 years on the web we've had this paradigm of the stateless request-response architecture (REST) based on the client initiating requests to the server as the model for how things should work; Node web applications can have real-time, two-way connections, where either the client or server can initiate communication, allowing them to exchange data at will. Additionally, it’s all based on the open web stack (HTML, CSS and JS)... [read more here](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
 
 	Using non-blocking, and event-driven I/O, it remains lightweight and **efficient in the face of data-intensive real-time applications** that run across distributed devices.  
     
@@ -32,14 +32,13 @@
 // Show screen shot of [Rails homepage](http://rubyonrails.org/)
 
 - **Rails** lets you build and change web apps quickly.  Its open source, well-documented, has a thriving & hip
-	community, runs on Ruby (which is known as a programmer friendly language), lets you interface well with the front-end, often used 
-	along with test-driven agile paradigm, and [more secure than most](http://youtu.be/2Ex8EEv-WPs).   
+	community, runs on Ruby (which is known as a programmer friendly language), lets you interface well with the front-end, often developed using the modern test-driven agile paradigm, and [more secure than most](http://youtu.be/2Ex8EEv-WPs). 
 
 	It's a mature, stable product that has proven its value.  As opposed to node, **it shines in cases where the
-	business logic aspects of the application are heaviest** (e-commerce, membership sites, content management, custom database solutions, ...)
+	business logic aspects of the application are heaviest** *(examples: e-commerce, membership sites, content management, custom database solutions, ...)*
 
 
-##### Check out [Technology Radar](http://www.thoughtworks.com/radar/#/) for an interesting angle on current tech trends.
+##### Very interesting: Check out [Technology Radar](http://www.thoughtworks.com/radar/#/) for an interesting angle on current tech trends.
 
 ---
 
@@ -58,7 +57,9 @@
 ---
 
 <a name="http"></a>
-### Take a look at the [HTTP & REST review]()
+### Take a look at [Week 1 Points to Ponder](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md)
+
+### Take a look at the [HTTP & REST review](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-HTTP.md)
 
 // The rest of this is for advanced beginners
 
