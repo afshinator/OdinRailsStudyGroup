@@ -65,13 +65,8 @@
 
 ### Ruby-isms    
 
-- hashes, get used to them, they're everywhere
+- [Hashes](http://richonrails.com/articles/working-with-ruby-hashes), symbols, and procs - get used to them, they're everywhere
 
-	http://richonrails.com/articles/working-with-ruby-hashes
-	
-- symbols,  get used to them quick because they're everywhere. 
-
-	
 
 - **Common idioms all over rails**:
 
