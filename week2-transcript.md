@@ -118,8 +118,9 @@
 
 **At this point, Beginners can keep listening or go home, we'll be addressing Advanced Beginners and folks from last week...**
 
-### Let's [go over last weeks assignment]()
+### Let's go over last weeks assignment
 
+- Details in [week 1 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md#assignment1)
 
 
 ### This weeks assignment for Advanced Beginners

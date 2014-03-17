@@ -58,7 +58,7 @@
 
 	See [week1.pointsToPonder.md](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPoinder.md)
 
-
+<a name="assignment1"></a>
 + **Homework Possibilities** -- from least to most time consuming
 	
 	- **Hartl's Tutorial - Chpt 2** [Scaffold app](http://ruby.railstutorial.org/chapters/a-demo-app#top)
