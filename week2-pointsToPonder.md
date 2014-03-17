@@ -5,7 +5,7 @@
 
 -[Week 2 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-transcript.md)
 
--[Week 2 Hangout Video - coming soon]()
+-[Week 2 Hangout Video](https://www.youtube.com/watch?v=6wg4DbSWzSs)
 
 
 ---

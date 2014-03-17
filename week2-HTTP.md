@@ -3,9 +3,9 @@
 #### From Week 2 Rails Study Group
 
 
--[Week 2 transcript]()
+-[Week 2 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-transcript.md)
 
--[Week 2 Hangout Video]() tba
+-[Week 2 Hangout Video](https://www.youtube.com/watch?v=6wg4DbSWzSs)
 
 ---
 
