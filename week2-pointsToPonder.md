@@ -85,13 +85,13 @@
 
 	```root to: "welcome#index"```
 
-	Here, 'root' is a method being called with a hash with key 'to' and value "welcome#index" string.
+	- Here, 'root' is a method being called with a hash with key 'to' and value "welcome#index" string.
 
 	Now in a view : 
 
 	```<%= form_for :post, url: posts_path do |f| %>```
 
-	form_for is a method being passed :post symbol, and a hash with key 'url',
+	- form_for is a method being passed :post symbol, and a hash with key 'url',
 	but first ```posts_path``` 'helper' method is being passed a block, which resolves to the value
 	for key value 'url'.
 	
@@ -99,7 +99,6 @@
 
 	```render text: params[:post].inspect```
 
-	```render``` is a method being passed a hash which has key 'text', the value of which is the result of running the
-	```inspect``` method on the params hash, whose key value :post is being accessed!  Got that?
+	- ```render``` is a method being passed a hash which has key 'text', the value of which is the result of running the ```inspect``` method on the params hash, whose key value :post is being accessed!  Got that?
 
 
