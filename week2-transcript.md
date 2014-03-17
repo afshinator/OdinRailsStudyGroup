@@ -134,23 +134,22 @@
 
 - Let's get well grounded in testing and RSpec. 
 
-#### Read [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and
+- **Read** [Odin's Project Ruby page](http://www.theodinproject.com/courses/web-development-101/lessons/ruby) and
 
-#### **do at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems**.
+- **Do** at least the first 7 [Test First Ruby](http://testfirst.org/learn_ruby) problems.
 
-	The goal of this exercise is to get comfortable with RSpec.  We're taken out of the context of Rails and left to deal with just spec-driven Ruby.
+	The goal of this exercise is to get comfortable with RSpec.  We're taken out of the context of Rails and left to deal with just spec-driven Ruby.  After you finish, 
 
-	After you finish, 
 
-#### read this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
+- **Read** this [BetterSpecs.org RSpec best-practices article](http://betterspecs.org/).
 
-#### Do [chapters 1 & 2 of Hartl](http://ruby.railstutorial.org/)
+- **Do** [chapters 1 & 2 of Hartl](http://ruby.railstutorial.org/)
 
 	After you finish chpt 2, think about what tests you would write.
 
-#### Read [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications) from *thoughtbot*
+- **Read** [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications) from *thoughtbot*
 
-#### Look at and use the [simplecov gem](https://github.com/colszowka/simplecov) - Its a [code coverage](http://stackoverflow.com/questions/1158518/what-is-code-coverage) tool.
+- **Look** at and use the [simplecov gem](https://github.com/colszowka/simplecov); it's a [code coverage](http://stackoverflow.com/questions/1158518/what-is-code-coverage) tool.
 
 
     
