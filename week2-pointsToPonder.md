@@ -1,6 +1,6 @@
-### Ruby on Rails Points to Ponder 
+## Ruby on Rails Points to Ponder 
 
-#### From Week 2 Rails Study Group
+#### Week 2 - Rails Study Group
 
 
 -[Week 2 transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-transcript.md)
@@ -63,8 +63,44 @@
 
 // The rest of this is for advanced beginners
 
-### [SO Post](http://stackoverflow.com/questions/5205002/summary-of-ruby-on-rails-fundamental-concepts)  
+### Ruby-isms    
 
-- Nice summary of stuff we should've come across as we did the two hw's
-- ref: from bottom of How this Course will Work
+- hashes, get used to them, they're everywhere
+
+	http://richonrails.com/articles/working-with-ruby-hashes
+	
+- symbols,  get used to them quick because they're everywhere. 
+
+	
+
+- Common idioms all over rails:
+
+	Colon placement can be confusing.  Rails Guides example (5.0) in the router shows
+
+		```resources :posts```
+
+	Whats is :posts?  Its a symbol.
+
+	Next line in the routes file shows
+
+		```root to: "welcome#index"```
+
+	Here, 'root' is a method being called with a hash with key 'to' and value "welcome#index" string.
+
+	Now looking in 5.2...
+
+		```<%= form_for :post, url: posts_path do |f| %>```
+
+	form_for is a method being passed :post and a hash, and a block  (??????)
+	posts_path is a method too (a 'helper' type), its result is attached as the value of the key url
+
+
+	Now in 5.3...
+
+	  	```render text: params[:post].inspect```
+
+	render is a method being passed a hash; key 'text', while the value is the result of running the
+	inspect method on the params method which returns an object which allows access to its keys using
+	symbols (or strings).
+
 

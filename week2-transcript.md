@@ -80,7 +80,7 @@
 - Read [my advice from last week](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-transcript.md#advice).
 
 
-### Time for this weeks [**Points to Ponder**]()
+### Time for this weeks [**Points to Ponder**](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-pointsToPonder.md)
 // go over *Why Rails?* from this weeks points
 
 // might want to go over [week1 points](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week1-pointsToPonder.md) based on audience, skip GET & POST because [HTTP points](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-HTTP.md) covers it.
@@ -149,7 +149,7 @@
 
 - **Read** [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications) from *thoughtbot*
 
-- **Look** at and use the [simplecov gem](https://github.com/colszowka/simplecov); it's a [code coverage](http://stackoverflow.com/questions/1158518/what-is-code-coverage) tool.
+- **Look** at and use the [simplecov gem](https://github.com/colszowka/simplecov) if time permits; it's a [code coverage](http://stackoverflow.com/questions/1158518/what-is-code-coverage) tool.
 
 
     
