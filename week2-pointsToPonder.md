@@ -73,34 +73,33 @@
 
 	
 
-- Common idioms all over rails:
+- **Common idioms all over rails**:
 
-	Colon placement can be confusing.  Rails Guides example (5.0) in the router shows
+	Colon placement can be confusing.  Must pay attention to placement. Here is an example from ```routes.rb``` :
 
-		```resources :posts```
+	```resources :posts```
 
-	Whats is :posts?  Its a symbol.
+	- Whats is :posts?  Its a symbol.  We're passing a symbol to the resources method.
 
-	Next line in the routes file shows
+	Another example from routes.rb
 
-		```root to: "welcome#index"```
+	```root to: "welcome#index"```
 
 	Here, 'root' is a method being called with a hash with key 'to' and value "welcome#index" string.
 
-	Now looking in 5.2...
+	Now in a view : 
 
-		```<%= form_for :post, url: posts_path do |f| %>```
+	```<%= form_for :post, url: posts_path do |f| %>```
 
-	form_for is a method being passed :post and a hash, and a block  (??????)
-	posts_path is a method too (a 'helper' type), its result is attached as the value of the key url
+	form_for is a method being passed :post symbol, and a hash with key 'url',
+	but first ```posts_path``` 'helper' method is being passed a block, which resolves to the value
+	for key value 'url'.
+	
+	And another : 
 
+	```render text: params[:post].inspect```
 
-	Now in 5.3...
-
-	  	```render text: params[:post].inspect```
-
-	render is a method being passed a hash; key 'text', while the value is the result of running the
-	inspect method on the params method which returns an object which allows access to its keys using
-	symbols (or strings).
+	```render``` is a method being passed a hash which has key 'text', the value of which is the result of running the
+	```inspect``` method on the params hash, whose key value :post is being accessed!  Got that?
 
 
