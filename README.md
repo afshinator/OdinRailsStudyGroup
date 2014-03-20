@@ -28,3 +28,9 @@
 - Sun, March 16th, 7:30pm PDT, 
 [Week 2 Hangout Video](http://www.youtube.com/watch?v=6wg4DbSWzSs&feature=share),
 [Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week2-transcript.md)
+
+---
+
+**Week 3 - Last week of prep work before Rails specific stuff**
+
+- Sun, March 23th, 7:30pm PDT
