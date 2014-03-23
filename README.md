@@ -34,5 +34,5 @@
 **Week 3 - An initial deep dive into testing concepts & methodology; more pre-Rails study**
 
 - Sun, March 23th, 7:30pm PDT,
-[Week 3 Hangout Link](https://plus.google.com/u/0/events/conkrmselq9mfr2e1ko9so9va58)
+[Week 3 Hangout Link](https://plus.google.com/u/0/events/conkrmselq9mfr2e1ko9so9va58),
 [Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week3-transcript.md)
