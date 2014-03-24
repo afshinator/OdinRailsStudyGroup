@@ -7,22 +7,34 @@
 - [Week 3 Hangout Video - Coming Soon]()
 
 ---
+### Welcome to week 3!
+
+- If you're new, you'll want to look at [transcripts from week 1 & 2](https://github.com/afshinator/OdinRailsStudyGroup), and the [Odin project rails curriculum](http://www.theodinproject.com/courses/ruby-on-rails/lessons).
+
+- In weeks 1 & 2 we set up our environments for Ruby & Rails, and dove right in to some smaller tutorials (Jumpstart Lab's Blogger2, and the RailsGuides').  We also spent a little time on HTTP, REST, and other misc. knick-knacks including a little journey into RegExps 101.  As far as the Odin Rails curriculum goes, we covered Step 1 and the first project.
+
+- We continue this week traversing and fleshing out our circular journey around all the technology involved in making a web app with Ruby and Rails.    I like the metaphor of the concentric circles of knowledge - each trip around the circle we hit the material yet again but with more experience and support from previous journeys.
+
 
 From last weeks assignment for beginners...
 
 **[Chris Pine's Learn To Program](https://pine.fm/LearnToProgram/)**
 
+- Once again: Why are we even concerned with this exercise?  Because Rails is a bunch of Ruby code.  Without Ruby knowledge you can't really develop misc Rails apps.
+
 - Site was down most of the week.  Bummer. 
 
 - Go and listen to [Wed Dev Study Group week 6](https://plus.google.com/u/0/events/cl5d2lc8p5cfp1v3ftt04njo10s) hangout, as they are also covering it.
 
-- If there was time, it'd be nice to approach the exercises test-first and write specs for each one.
+- If time allows, it'd be nice to approach the exercises test-first, writing specs for each one before writing the implementation.
 
-- You'll get more Ruby in this weeks assignment in Chpt 4 of Hartl.
+- You'll get more Ruby this coming week in [Chpt 4 of Hartl](http://ruby.railstutorial.org/chapters/rails-flavored-ruby#top).
 
-### Let's get right into everything Testing related
+### Let's get right into Testing related stuff!
 
-- Concepts, methodology, using RSpep & Capybara;  we're not going to explore Cucumber, TestUnit, etc.. unless someone really wants to.
+- I'm going to tackle this material from all the angles I can; TDD / BDD in rails my Achilles heel in Rails development and I hear the same from many others.  
+
+- Lets get our heads around the concepts, methodology, using RSpep & Capybara;  We're **not going to explore** Cucumber or TestUnit, unless someone really wants to.
 
 #### First, the high level overview
 
@@ -33,22 +45,24 @@ From last weeks assignment for beginners...
   not tied to the Rails world.  The [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html)
   is also a useful concept.
 
-  Lets go with these definitions for now:
+  Here's some terms to know (go with it for now!):
 
-- **Unit Tests** - Tests the smallest unit of functionality, typically a method/function. Unit tests should be focused on testing one particular piece of functionality.  Low level, usually fast.   In the Rails universe, that usually means testing **models**.  Unit tests should catch edge cases and confirm correct object behavior.
+- **Unit Tests** - Tests the smallest unit of functionality, typically a method/function. Unit tests should be focused on testing one particular piece of functionality.  They're low level, and usually fast.   In the Rails universe, that usually means testing **models**.  Unit tests should catch edge cases and confirm correct object behavior.  More details to come in a minute.
 
-- **Acceptance Tests** - High level (typically user-level) tests.  They run a lot more code than unit tests, and sometimes depend on external services; so they're generally slow.   Some people use this term to cover Integration and Functional Tests both.
+- **Acceptance Tests** - High level (typically user-level) tests.  They run a lot more code than unit tests, and sometimes depend on external services; so they're generally slow.   Some people use this term to cover both Integration and Functional tests.
 
 - **Integration Tests** - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly.  Tests the interactions b/w different controllers and app workflow; end to end (but not necessarily testing a whole app feature?).
 
-- **Functional Tests** - Functional tests check a particular feature for correctness. Functional tests don't concern themselves with intermediate results or side-effects, just the end goal.  For us, that mean testing the controller &view by for example, looking for key HTML elements.
+- **Functional Tests** - Functional tests check a particular feature for correctness. Functional tests don't concern themselves with intermediate results or side-effects, just the end goal.  In Rails context, functional tests refer to testing controller & view by, for example, looking for key HTML elements.
 
+- **Feature Tests** - Some combo of the last 3... related to a specific app feature you want to exercise.
+##### *RSpec advice #1 : *
 
-#### Use RSpec with --format documentation - [ref](http://blog.carbonfive.com/2010/10/21/rspec-best-practices/)
+#### Call RSpec on the command-line with --format documentation - [ref](http://blog.carbonfive.com/2010/10/21/rspec-best-practices/)
 
-- Presents nice verbose output; helps when refactoring the test so that the language is clear
+- Uses your tests syntax to show output; helps when refactoring the test so that the language is clear
 
-- Given a test like:
+- Example:
 
 ```
 describe "temperature conversion functions" do
@@ -58,14 +72,16 @@ describe "temperature conversion functions" do
     end
   ...
 ```    
-will output:
+*will output:*
 
 ```
 temperature conversion functions
     #ftoc
-      converts freezing temperature
+    converts freezing temperature
     converts boiling temperature  
 ```
+
+##### *RSpec advice #2 : *
 
 - Put often used RSpec commands into your ```.rspec``` file;  (use ```ls -a``` to see all hidden files)
 
@@ -84,31 +100,32 @@ temperature conversion functions
 describe "Object" do
   context "when created" do
     it "has an attribute X" do
-      test code
+      expect(something).to equal(z)  # assert something
     end
     it "has an attribute Y" do
-      test code
+      expect(something).to ... 
     end
   end
 end
 ```
 
-
 ---
 
-#### Use 'expect' over 'should' - [ref](https://www.relishapp.com/rspec/rspec-expectations/docs/syntax-configuration)
+##### *Newest [RSpec syntax](https://relishapp.com/rspec/rspec-rails/docs): *
+
+#### Use ['expect' over 'should'](https://www.relishapp.com/rspec/rspec-expectations/docs/syntax-configuration)
 - A lot of blogs posts and resources are using the older 'should' syntax.  For example the above is from Test-First Ruby; here it is re-written:
 
 ```
 describe "temperature conversion functions" do
   describe "#ftoc" do
     it "converts freezing temperature" do
-      expect(ftoc(32)).to eq(0)            # notice change in 'should' and '== 0'  from above
+      expect(ftoc(32)).to eq(0)           # notice change in 'should' and '== 0'  from above
   end
   ...
 ```
 
-- betterspecs.org brings up this point, and you can read the [RSpec docs](https://www.relishapp.com/rspec/rspec-expectations/docs/syntax-configuration) on the issue.  Funny thing is betterspec.org article uses 'should' in other parts of the article, and so do many especially older posts.  I'm not sure if I'm missing some information about where 'should' is more appropriate or at least acceptable.
+- betterspecs.org brings up this point.  Funny thing is betterspec.org article uses 'should' in other parts of the article, and so do many especially older posts.  I'm not sure if I'm missing some information about where 'should' is more appropriate or at least acceptable.
 
 ---
 
@@ -116,14 +133,14 @@ describe "temperature conversion functions" do
 
 - [My solutions](https://github.com/afshinator/playground/tree/master/TestFirstRubyExercises)
 
-- In the middle of the week I asked that you re-wite the tests according to [best practices from betterspecs.org](http://betterspecs.org/); lets go over that...
+- In the middle of the week I asked that you re-wite the tests according to [best practices from betterspecs.org](http://betterspecs.org/); how far did folks get on that?
 
-// Go over tests
+
 
 - That site has some links to other good RSpec/Testing Best Practices articles.  
 
-  [Eggs on Bread](http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/) - 
-
+  [Eggs on Bread](http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/)
+  
   [Carbon Emitter](http://blog.carbonfive.com/2010/10/21/rspec-best-practices/) - Has a step-by-step breakdown of how to approach your tests
 
   [Andy Vanasse](http://blog.andyvanasse.com/post/503615383/rspec-best-practices)
@@ -138,9 +155,9 @@ describe "temperature conversion functions" do
     
 *Notes from that article...*
 
-- "...distinguishing between RSpec and Capybara methods. Capybara methods are the ones that are actually interacting with the page, i.e. clicks, form interaction, or finding elements on the page."
+- "...distinguishing between RSpec and Capybara methods: Capybara methods are the ones that are actually interacting with the page, i.e. clicks, form interaction, or finding elements on the page."
 
-- Prefix class methods tests with a '.', instance methods with a '#' 
+- *Testing Convention:* Prefix class methods tests with a '.' and instance methods with a '#' 
 
 - **Model Specs** - Think unit tests, tests small parts of the system such as classes or methods
     + Four phase test pattern for unit tests
@@ -184,7 +201,10 @@ end
     
 - **View specs** - "A lot of developers forget about these tests and use feature specs instead... While you can cover each view conditional with a feature spec, [it would be slower]."
 
-- What is **Factory Girl** ? - A way to set up database records in a way to test against them in different scenarios; eg) create users for your test.  Prefer them over ```User.create``` / Rails fixture.
+---
+##### *Testing Related*
+
+- What is **Factory Girl** ? - A gem that allows you to set up database records in a way to test against them in different scenarios; eg) create users for your test.  Prefer 'factories' over ```User.create``` / Rails fixture.  More on this in future weeks.
 
 - To test **front-end JS**, install a JS driver, add 'metadata key' to test
 
@@ -214,23 +234,23 @@ end
 
 - Basically, test return values, side-effects, critical interations; but not implementation details.
 
-- We can say that for each System-Under-Test / object, there are **3 origins for messages** associated with each, characterized by the **origin of those messages**:
+- We can say that for each 'System-Under-Test' / object, there are **3 origins for messages** associated with the object/system:
 
-    - **Incoming**
-    - **Outgoing**
-    - **To Self**
+    - **Incoming** messages
+    - **Outgoing** messages
+    - Messages **to self**
 
-- And Lets say there are 2 types of messages, (and 1 combo type):
+- And Lets say there are **2 types of messages**, (and 1 combo type):
   
-    - **Query** : Returns something, changes nothing (no side effects)
-        eg) Get the city of the user named so and so; 
+    - **Query** : *Returns something, changes nothing* (no side effects)
+        eg) Get the city of user that has name 'Bob Loblaw; 
 
-    - **Command** - Returns nothing, changes something
-        eg) writing to the database; change the name of the user
+    - **Command** - *Returns nothing, changes something* -
+    eg) writing to the database; change the name of the user
 
-    - **Combination** - eg) popping off a stack; returns something, changes something
+    - **Combination** - eg) popping off a stack; *returns something, changes something*
 
-- Let's look at the different scenarios:
+- Let's look at the different scenarios and some rules about **how to test them**:
 
     - **Incoming, Query** - Rule: Make assertions about what they send back; assert a known output for known input.  Test the interface, not the implementation.
     
@@ -251,6 +271,8 @@ end
 - **Outgoing, Command** - Rule: Just test your expectation that the message is sent, dont test the outcome; (break rule if side effects are stable and cheap).   Use mocks.
 
 - **To Self** - Rule: Do not test private methods; essentially ignore them.  Do not make assertions about their result; do not expect to send them.  eg) a private function;  dont test it specifically,  write tests for the interface.  ( And break the rule when you need to. )
+
+{ refs: [Video: Sandi Metz](http://www.youtube.com/watch?v=URSWYvyc42M), [Video: Katrina Owen](http://vimeo.com/68730418), [Book: Growing OO Software guided by Tests](http://www.growing-object-oriented-software.com/) }
 
 ### For the coming week...
 
