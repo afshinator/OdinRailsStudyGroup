@@ -4,7 +4,7 @@
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-- [Week 3 Hangout Video - Coming Soon]()
+- [Week 3 Hangout Video](https://www.youtube.com/watch?v=8as2mxkUu7c)
 
 ---
 ### Welcome to week 3!
