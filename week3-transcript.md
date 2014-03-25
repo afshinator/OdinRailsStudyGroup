@@ -32,7 +32,7 @@ From last weeks assignment for beginners...
 
 ### Let's get right into Testing related stuff!
 
-- I'm going to tackle this material from all the angles I can; TDD / BDD in rails my Achilles heel in Rails development and I hear the same from many others.  
+- I'm going to tackle this material from all the angles I can; TDD / BDD is my Achilles heel in Rails development and I hear the same from many others.  
 
 - Lets get our heads around the concepts, methodology, using RSpep & Capybara;  We're **not going to explore** Cucumber or TestUnit, unless someone really wants to.
 
@@ -60,7 +60,7 @@ From last weeks assignment for beginners...
 
 #### Call RSpec on the command-line with --format documentation - [ref](http://blog.carbonfive.com/2010/10/21/rspec-best-practices/)
 
-- Uses your tests syntax to show output; helps when refactoring the test so that the language is clear
+- Uses your tests syntax to show output; helps when refactoring the test so that the language is clear.
 
 - Example:
 
@@ -114,7 +114,7 @@ end
 ##### *Newest [RSpec syntax](https://relishapp.com/rspec/rspec-rails/docs): *
 
 #### Use ['expect' over 'should'](https://www.relishapp.com/rspec/rspec-expectations/docs/syntax-configuration)
-- A lot of blogs posts and resources are using the older 'should' syntax.  For example the above is from Test-First Ruby; here it is re-written:
+- A lot of blog posts and resources are using the older 'should' syntax.  For example the above is from Test-First Ruby; here it is re-written:
 
 ```
 describe "temperature conversion functions" do
@@ -125,7 +125,7 @@ describe "temperature conversion functions" do
   ...
 ```
 
-- betterspecs.org brings up this point.  Funny thing is betterspec.org article uses 'should' in other parts of the article, and so do many especially older posts.  I'm not sure if I'm missing some information about where 'should' is more appropriate or at least acceptable.
+- betterspecs.org brings up this point.  Funny thing is betterspec.org article uses 'should' in other parts of the article, and so do many especially older posts.  I'm not sure if I'm missing some information about where 'should' is more appropriate, or at least acceptable.
 
 ---
 
@@ -137,7 +137,7 @@ describe "temperature conversion functions" do
 
 
 
-- That site has some links to other good RSpec/Testing Best Practices articles.  
+- Bottom of betterspecs.org article has some links to other good RSpec/Testing Best Practices articles:
 
   [Eggs on Bread](http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/)
   
@@ -190,7 +190,7 @@ end
 
 - **Now for Controllers** ...
 
-    + When testing multiple paths through a controller is necessary, favor using controller specs over feature specs; they are faster to run and often easier to write. Example: authentication
+    + When testing multiple paths through a controller is necessary, favor using controller specs over feature specs; they are faster to run and often easier to write.
     
     + betterspecs.org :
       "When I first started testing my apps I was testing controllers, now I don't. Now I only create integration tests using RSpec and Capybara. Why? Because I truly believe that you should test what you see and because testing controllers is an extra step you don't need."
@@ -216,23 +216,25 @@ end
  end
 ```
 
-- **Database Cleaner** , why? "when we use a JavaScript driver, the test is run in another thread. This means it does not share a connection to the database and your test will have to commit the transactions in order for the running application to see the data..." - its slow
+- **Database Cleaner** , why? "when we use a JavaScript driver, the test is run in another thread. This means it does not share a connection to the database and your test will have to commit the transactions in order for the running application to see the data..."; To make sure you start with a blank slate test database between test runs.  [Avdi has some good info](http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/) on it.
 
-- **Test Doubles** - simple objects that emulate another obj in your system; { see article example }
+- **Test Doubles** - Simple objects that emulate another obj in your system; { see article example, will come up in coming weeks }
 
-- **Test Stubs** - add some functionality to the double ; { see article example }
+- **Test Stubs** - Add some functionality to the double ; { as above }
 
-- **Test Spies** - RSpec Mocks; "...scenarios where you want to validate that an object receives a specific method. In order to follow Four Phase Test best practices, we use test spies so that our expectations fall into the verify stage of the test."  { see article example }
+- **Test Spies** - RSpec Mocks; "...scenarios where you want to validate that an object receives a specific method. In order to follow Four Phase Test best practices, we use test spies so that our expectations fall into the verify stage of the test."  { as above }
 
-- **Webmock** - Instead of making third party requests, learn how to stub external services in tests.
+- **[Webmock](https://github.com/bblimke/webmock)** - Instead of making third party requests, learn how to stub external services in tests.  This is a library for stubbing and setting expectations on HTTP requests in Ruby.  Again, its early in the game to get too deep into this but soon come!  Some [details here](http://robots.thoughtbot.com/how-to-stub-external-services-in-tests).
 
 ---
 
 #### An approach to Unit Tests
 
-- Generally we can say, we want our tests to be thorough, stable, fast.  We want to prove that the single object under test is behaving correctly.  Make them few; you want the smallest expression of your proof.
+- Generally,
 
-- Basically, test return values, side-effects, critical interations; but not implementation details.
+  We can say, we want our tests to be thorough, stable, fast.  We want to prove that the single object under test is behaving correctly.  The fewer tests that provide adequate expression of your proof, the better.
+
+  Test return values, side-effects, critical interactions; but not implementation details.
 
 - We can say that for each 'System-Under-Test' / object, there are **3 origins for messages** associated with the object/system:
 
@@ -243,18 +245,18 @@ end
 - And Lets say there are **2 types of messages**, (and 1 combo type):
   
     - **Query** : *Returns something, changes nothing* (no side effects)
-        eg) Get the city of user that has name 'Bob Loblaw; 
+      eg) Get the city of user that has name 'Bob Loblaw; 
 
     - **Command** - *Returns nothing, changes something* -
-    eg) writing to the database; change the name of the user
+      eg) writing to the database; change the name of the user
 
     - **Combination** - eg) popping off a stack; *returns something, changes something*
 
-- Let's look at the different scenarios and some rules about **how to test them**:
+*When you approach testing your classes, think about which of these cases fit its methods.  Let's look at the different scenarios and some **general rules about how to test them**:*
 
-    - **Incoming, Query** - Rule: Make assertions about what they send back; assert a known output for known input.  Test the interface, not the implementation.
+- **Incoming, Query** - Rule: Make assertions about what they send back; assert a known output for known input.  Test the interface, not the implementation.
     
-    - **Incoming, Command** - Rule: Test incoming command message by making assertions about direct public side effects
+- **Incoming, Command** - Rule: Test incoming command message by making assertions about direct public side effects.
     
 ```    
 # Here's a common scenario:  combined query / command : 
@@ -263,16 +265,19 @@ def set_x(new_x)
     @x = new_x        # returns x which is a query; sets @x with is a command
 end
 
+# Test that is you send a particular value to set_x, it returns that exact same value (tests the interface)
 # Test set_x by calling it with a known number new_x, assert @x = new_x (which is asserting the side-effect)
 ```
 
-- **Outgoing, Query** -  Rule: Do not test them; don't make assertions about their results, don't expect to send them.  One objects outgoing is another objects incoming... so dont redundantly check the results you get back.  Example of blog post object sending message to its attached category object.  Dont write tests for blog post for sending message, write tests on category object for receiving them.
+- **Outgoing, Query** -  Rule: Do not test them! don't make assertions about their results, don't expect to send them.  One objects' outgoing is another objects' incoming... so don't redundantly check the results you get back.  Example of blog post object sending message to it's attached category object.  Dont write tests for blog post for sending message, write tests on category object for receiving them.
 
-- **Outgoing, Command** - Rule: Just test your expectation that the message is sent, dont test the outcome; (break rule if side effects are stable and cheap).   Use mocks.
+- **Outgoing, Command** - Rule: Just test your expectation that the message is sent, dont test the outcome; (break rule if side effects are stable and cheap).   { Use mocks. }
 
-- **To Self** - Rule: Do not test private methods; essentially ignore them.  Do not make assertions about their result; do not expect to send them.  eg) a private function;  dont test it specifically,  write tests for the interface.  ( And break the rule when you need to. )
+- **To Self** - Rule: Do not test private methods; essentially ignore them.  Do not make assertions about their result; do not expect to send the message to them.  eg) private functions  ( And break the rule when you need to. )
 
 { refs: [Video: Sandi Metz](http://www.youtube.com/watch?v=URSWYvyc42M), [Video: Katrina Owen](http://vimeo.com/68730418), [Book: Growing OO Software guided by Tests](http://www.growing-object-oriented-software.com/) }
+
+*We'll apply these rules as we encounter testing in Hartl and see how it matches with what he's doing.*
 
 ### For the coming week...
 
