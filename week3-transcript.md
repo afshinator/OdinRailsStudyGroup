@@ -58,6 +58,7 @@ From last weeks assignment for beginners...
 - **Feature Tests** - Some combo of the last 3... related to a specific app feature you want to exercise.
 
 <a id="rspec-cmd-line"></a>
+
 ##### *RSpec advice #1 : *
 
 #### Call RSpec on the command-line with --format documentation - [ref](http://blog.carbonfive.com/2010/10/21/rspec-best-practices/)
