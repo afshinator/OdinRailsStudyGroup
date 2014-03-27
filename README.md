@@ -38,6 +38,8 @@
 
 ---
 
-**Week 4 - Coming soon...**
+**Week 4 - Review Hartl's Chpt 3,4; RESTClient project; More on testing, ...**
 
 - Sun, March 30th, 7:30pm PDT,
+[Week 4 Hangout Link](https://plus.google.com/u/0/events/c5j2kcpn7n0kitvg3138dnhnvg0)
+
