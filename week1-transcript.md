@@ -96,6 +96,7 @@
 
 - [Code Learn](http://www.codelearn.org/ruby-on-rails-tutorial) - Another one I don't know about
 
-- [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code)
+- [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-code), 
+and [another](http://assemble.io/docs/Cheatsheet-Markdown.html)
 
 - [dilinger.io](http://dillinger.io/) - It uses a different font than Github!  Otherwise useful.
