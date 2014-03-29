@@ -77,6 +77,14 @@ Normal variables are available just in the method they are defined.  Instance va
 
 - This article presented common RSpec idioms.   You're definitely going to see this material in Hartl as we go deeper; if you haven't read the article, go read it!  Watch out, they use the ```should``` syntax.
 
+- Some highlights:
+
+  ```before``` and ```after``` blocks
+
+  ```describe``` and ```context```
+
+  using ```let```, ```subject```, and [```specify```](http://stackoverflow.com/questions/8484133/difference-between-an-it-block-and-a-specify-block-in-rspec)
+
 
 ### Odin's [A Raily Web Refresher](http://www.theodinproject.com/ruby-on-rails/a-railsy-web-refresher)
 
@@ -134,7 +142,7 @@ Normal variables are available just in the method they are defined.  Instance va
 
 
 - "[In this chapter we are] starting off with **integration tests**, known as request specs in the context of RSpec, they allow us to simulate the actions of a user interacting with our application using a web browser."
-![alt text](./img/study4.jpg "Lets do this")
+![alt text](./img/study2.jpg "Lets do this")
 
 - *Advice:* [Don't forget to add ](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week3-transcript.md#rspec-advice-1--)
 ```-format documentation``` to your ```.rspec``` file.
@@ -243,6 +251,8 @@ describe "Home page" do
 ```
 
 - Notice this example doesn't show factoring out the ```subject { page }``` shown before.
+
+![alt text](./img/rrs.png "our logo")
 
 
 #### Replacing sqlite3 with PostgreSQL###
