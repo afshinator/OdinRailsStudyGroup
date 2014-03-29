@@ -139,7 +139,7 @@ Normal variables are available just in the method they are defined.  Instance va
 
 
 ### *(3.2)* **Hartl kicks off the tutorials first tests** 
-![alt text](./img/study2.jpg "Lets do this")
+
 
 - "[In this chapter we are] starting off with **integration tests**, known as request specs in the context of RSpec, they allow us to simulate the actions of a user interacting with our application using a web browser."
 
@@ -252,7 +252,6 @@ describe "Home page" do
 
 - Notice this example doesn't show factoring out the ```subject { page }``` shown before.
 
-![alt text](./img/rrs.png "our logo")
 
 
 #### Replacing sqlite3 with PostgreSQL###
