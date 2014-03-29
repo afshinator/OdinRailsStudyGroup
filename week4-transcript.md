@@ -36,9 +36,7 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
 - **Always lowercase snake_case**, 
 
-- Model filename matches models class name, but lowercase:
-
-  ```app/models/visitor.rb```
+- Model filename matches models class name, but lowercase:  ```app/models/visitor.rb```
 
 - Controller filename matches controller class name, but snake_case
 
@@ -48,7 +46,7 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
   ```app/views/visitors```
 
-  ##### ref: [from Kehoe](http://learn-rails.com/)
+##### ref: [from Kehoe](http://learn-rails.com/)
 
 ![alt text](./img/thought1.jpg "Think on these things")
 
