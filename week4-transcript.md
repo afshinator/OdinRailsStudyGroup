@@ -131,10 +131,10 @@ Normal variables are available just in the method they are defined.  Instance va
 
 
 ### *(3.2)* **Hartl kicks off the tutorials first tests** 
-![alt text](./img/study1.jpg "Lets do this")
 
 
 - "[In this chapter we are] starting off with **integration tests**, known as request specs in the context of RSpec, they allow us to simulate the actions of a user interacting with our application using a web browser."
+![alt text](./img/study4.jpg "Lets do this")
 
 - *Advice:* [Don't forget to add ](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week3-transcript.md#rspec-advice-1--)
 ```-format documentation``` to your ```.rspec``` file.
