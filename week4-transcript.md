@@ -1,13 +1,12 @@
 ## Rails Study Group Week 4 Transcript
 
-![alt text](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/img/rr.jpg "our logo")
 
 - [The Odin Project](http://www.theodinproject.com)
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
 - [Week 4 Hangout Video]()
-
+![alt text](./img/rr.jpg "our logo")
 ---
 
 Three is the magic number, but 4 gives you more!  **Welcome to Week 4!**
