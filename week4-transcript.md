@@ -34,19 +34,18 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
 **Filenames :**
 
-- **Always lowercase snake_case**, 
+- **Always lower, snake_case**, 
 
 - Model filename matches models class name, but lowercase:  ```app/models/visitor.rb```
 
-- Controller filename matches controller class name, but snake_case
+- Controller matches class name, but snake_case : ```app/controllers/visitors_controller.rb```
 
-  ```app/controllers/visitors_controller.rb```
+  Still true, even if you use CamelCase with ```rails generate``` - *(3.1)*
 
-- Views folder matches model class name, but plural and lowercase
+- Views folder matches model class name, but plural and lowercase : ```app/views/visitors```
 
-  ```app/views/visitors```
 
-##### ref: [from Kehoe](http://learn-rails.com/)
+###### *ref: [ Kehoe](http://learn-rails.com/)*
 
 
 ![alt text](./img/rrs.png "our logo")
@@ -93,11 +92,11 @@ Normal variables are available just in the method they are defined.  Instance va
 
   - I call mine [RestPinger](https://github.com/afshinator/playground/tree/master/RestPinger)
 
-  - let's play with it...
+  - let's play with it...  Here is the rake:routes output that annotate_gem model puts in routes.rb:
+
+  **Hacking 101** : Forge the url that the browser would send your rails app; lets try some benign, and then some downright destructive stuff...
 
 ![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
-
-
 
 
 ### Hartl's Tutorial - [Chapter 3](http://ruby.railstutorial.org/chapters/static-pages#top) Misc points of interest
@@ -114,20 +113,15 @@ Normal variables are available just in the method they are defined.  Instance va
 - *Advice:* Look into **RVM** if you want to have multiple vers of Ruby on your box and be able to switch between them painlessly.
 
 
-- The first time, he bundle installs like so: ```bundle install --without production``` to not install production gems.  After 1st time, it remembers that option for future ```bundles install``` invocations.
+- The first time, he **bundle installs** like so: ```bundle install --without production``` to not install production gems.  After 1st time, it remembers that option for future ```bundles install``` invocations.
 
 
-- "Because the sample application is shared as a public repository [on Github], it’s important to update the so-called secret token used by Rails to protect session variables so that it is dynamically generated rather than hard-coded"
+- **Security issue:** "Because the sample application is shared as a public repository [on Github], it’s important to update the so-called secret token used by Rails to protect session variables so that it is dynamically generated rather than hard-coded"
 
   + Modify ```config/initializers/secret_token.rb``` as per *listing 3.2*
 
 
 + Don't forget to update your ```.gitignore``` to something like *[listing 1.7](http://ruby.railstutorial.org/chapters/beginning#code-gitignore)*
-
-+ Did you [deploy to Heroku](http://ruby.railstutorial.org/chapters/beginning#sec-heroku_setup)?  Might as well start now.
-
-
-- *(3.1)* **Controller filenames are snake_case**, regardless of whether you use CamelCase or snake_case on command line ```rails generate``` command.  **Class name is in CamelCase**.
 
 
 - *(Box 3.2)* Undoing ```rails generate ...``` and ```rake db:migrate```
@@ -136,7 +130,9 @@ Normal variables are available just in the method they are defined.  Instance va
 - *(Box 3.3)* Mentions "previous versions of Rails used PUT in place of PATCH, and Rails 4.0 still supports this usage, but PATCH matches the intended HTTP usage better and is preferred for new applications."
 
 
-### *(3.2)* **The First Tests** 
+### *(3.2)* **Hartl kicks off the tutorials first tests** 
+![alt text](./img/study1.jpg "Lets do this")
+
 
 - "[In this chapter we are] starting off with **integration tests**, known as request specs in the context of RSpec, they allow us to simulate the actions of a user interacting with our application using a web browser."
 
@@ -153,9 +149,9 @@ Normal variables are available just in the method they are defined.  Instance va
 
 - ```rails g``` can also produce integration test templates : ```rails generate integration_test static_pages```
 
-    + Notice auto-generated spec uses older 'should' syntax, bummer.
+    + Notice auto-generated spec uses older 'should' syntax, bummer:
 
-```
+``` ruby
 describe "StaticPages" do
   describe "GET /static_pages" do
     it "works! (now write some real specs)" do
@@ -172,7 +168,7 @@ end
 describe "Static pages" do
     describe "Home page" do
       it "should have the content 'Sample App'" do
-        visit '/static_pages/home'          # visit is a Capybara function
+        visit '/static_pages/home'                  # visit is a Capybara function
         expect(page).to have_content('Sample App')  # page variable provided also by Capybara
       end
     end
@@ -183,7 +179,7 @@ end
 
     - Replace all the ```visit '/static_pages/help'``` (in Home, Help, and About tests) with just one ```before { visit root_path }``` just inside the first describe block.
 
-```
+``` ruby
 describe "Home page" do
   before { visit root_path }
 
@@ -195,9 +191,9 @@ describe "Home page" do
 ```   
 
 
-- All tests for Home page have ```expect(page)``` and corresponding descriptions ```it "should have content..."```;  eliminate duplication by telling RSpec that ```page``` is the subject of the tests, and using a variant of ```it``` to collapse the code and description into one line.  Because of ```subject { page }```, the call to should automatically uses the ```page``` variable supplied by Capybara.
+- All tests for Home page have ```expect(page)``` and corresponding descriptions ```it "should have content..."```;  eliminate duplication by telling RSpec that ```page``` is the subject of the tests, and using a variant of ```it``` to collapse the code and description into one line.  Because of ```subject { page }```, the call to ```should``` automatically uses the ```page``` variable supplied by Capybara.
 
-```
+``` ruby
  subject { page }
 
   describe "Home page" do
@@ -218,7 +214,7 @@ describe "Home page" do
 2. Refactor to use ```let:```, *[listing 3.31](http://ruby.railstutorial.org/chapters/static-pages#code-pages_controller_spec_exercise)*
 
 **Before:** (Tests for Home, Help, About, (Contact), all contain string in the expect line)
-```
+``` ruby
   describe "Home page" do
     
     ...
@@ -232,7 +228,7 @@ describe "Home page" do
 
 **After:**
 
-```
+``` ruby
   let(:base_title) { "Ruby on Rails Tutorial Sample App" }  
   
   describe "Home page" do
@@ -246,14 +242,14 @@ describe "Home page" do
   end
 ```
 
-- Notice this example doesn't show factoring out the ```subject { page }```
+- Notice this example doesn't show factoring out the ```subject { page }``` shown before.
 
 
 #### Replacing sqlite3 with PostgreSQL###
 
 - to "minimize the possibility of subtle incompatibilities [between production and dev/test environments]." 
 
-- Skipped it! I think those subtle incompatibilities have been worked out since Rails has hit vers 4.
+- Skipped it! { mention specific issues}
 
 #### Guard - [(3.6.2)](http://ruby.railstutorial.org/chapters/static-pages#sec-guard)
 
@@ -274,13 +270,15 @@ describe "Home page" do
 
 ### This weeks useful gems
 
-- **[guard-rspec](https://github.com/guard/guard-rspec)** - Already went through it.  
+- **[simple-cov] demo**
+
+- **[guard-rspec](https://github.com/guard/guard-rspec)** - as above.  
 
   - [ASCIIcast](http://asciicasts.com/episodes/264-guard) on it, good stuff.
 
 - **[guard-livereload](https://github.com/guard/guard-livereload)** - Automatically reload your browser when 'view' files are modified; (use with Guard)
 
-  - Get the browser extension for it.  Some [help](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-).
+  - You need to also get the browser extension for it.  If you need [help](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-).
 
 - **[MetaRequest](https://github.com/dejan/rails_panel/tree/master/meta_request)** and **[rails_panel](https://github.com/dejan/rails_panel)**
 
@@ -288,4 +286,4 @@ describe "Home page" do
 
 - better_errors
 
-### Debugging
+
