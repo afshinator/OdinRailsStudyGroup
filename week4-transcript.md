@@ -1,6 +1,6 @@
 ## Rails Study Group Week 4 Transcript
 
-![Studygroup crossing](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/img/rr.jpg)
+![alt text](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/img/rr.jpg "our logo")
 
 - [The Odin Project](http://www.theodinproject.com)
 
