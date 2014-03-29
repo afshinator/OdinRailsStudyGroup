@@ -1,5 +1,5 @@
 ## Rails Study Group Week 4 Transcript
-![alt text](./img/rrs.jpg "our logo")
+![alt text](./img/rrs.png "our logo")
 
 - [The Odin Project](http://www.theodinproject.com)
 
@@ -48,7 +48,9 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
 ##### ref: [from Kehoe](http://learn-rails.com/)
 
-![alt text](./img/thought1.jpg "Think on these things")
+
+![alt text](./img/rrs.png "our logo")
+
 
 #### Instance Variables
 
@@ -70,6 +72,7 @@ Normal variables are available just in the method they are defined.  Instance va
 - Rails view is not a separate class; it's a template and part of the current controller object.
 
 
+![alt text](./img/thought1.jpg "Think on these things")
 
 ### Article: treehouse's [An Intro to RSpec ](http://blog.teamtreehouse.com/an-introduction-to-rspec)
 
@@ -86,13 +89,15 @@ Normal variables are available just in the method they are defined.  Instance va
 
 
 
-### Odin's [RestClient Project]()
+### Odin's [RestClient Project](http://www.theodinproject.com/ruby-on-rails/let-s-get-building)
 
-  - My RESTPinger
+  - I call mine [RestPinger](https://github.com/afshinator/playground/tree/master/RestPinger)
 
-  - picture of ```routes.rb```
+  - let's play with it...
 
-  - let's attack the railsguides blog app!
+![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
+
+
 
 
 ### Hartl's Tutorial - [Chapter 3](http://ruby.railstutorial.org/chapters/static-pages#top) Misc points of interest
