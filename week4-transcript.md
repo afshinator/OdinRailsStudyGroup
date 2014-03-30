@@ -101,7 +101,7 @@ Things that make you go "hmmm",
 
 ### Odin's [RestClient Project](http://www.theodinproject.com/ruby-on-rails/let-s-get-building)
 
-  - I call mine [RestPinger](https://github.com/afshinator/playground/tree/master/RestPinger)
+  - The curriculum asks for little functionality from this project; I think it was a fun little exercise; I call mine [RestPinger](https://github.com/afshinator/playground/tree/master/RestPinger)
 
   - Not the cleanest code!  Passing in a load of params in the hash is an anti-pattern!   
   I took a crack at TDDing it, here are [tests](https://github.com/afshinator/playground/blob/master/RestPinger/restpinger_spec.rb),
@@ -109,9 +109,19 @@ Things that make you go "hmmm",
 
   Note: How do I check the STDOUT output?, I hardcoded my Rails test app address
 
-  - let's play with it...  Here is the rake:routes output that annotate_gem model puts in routes.rb:
+  - let's play with it...  
+
+    First try passing nothing on the command line to get instructions,
+
+    then try passing in a string to do a google search on,
+
+    then try passing in a hash that does a search at ask.com,
+
+
+  - Here is the rake:routes output that annotate_gem model puts in routes.rb:
 
 ![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
+
 
 
   Try:
@@ -126,7 +136,7 @@ rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-7538
   Let's get mischevious, try:
 
 ``` ruby 
-#  GET /post/new  (#new)         This is destructive; we're asking for database changes now!
+#  GET /post/new  (#new)         Remember this just asks for the new posts form;  #create actually creates it.
 rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts/new"} )
 ```
 
@@ -140,7 +150,7 @@ class PostsController < ApplicationController
   http_basic_authenticate_with name: "afshin", password: "afshin", except: [:index, :show]  
 ```
 
-  Lets take it out!  Try RestPinger with the above options again... we get the form back.
+  Lets take it out!  Try RestPinger with the above options again... we get the page with the form for new posts back.
 
   Now lets get really evil.  **Let's destroy an article!**  What should our url look like?  Now we need a DELETE not a GET, the id of the post, and ... thats it.
 
@@ -149,25 +159,27 @@ class PostsController < ApplicationController
 rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts",  :id => "2"} )
 ```  
 
-  **422 Unprocessable Entity**!   422 is returned by the Rails ActionController by default when a POST doesn't contain a key, used to prevent **CSRF** - Cross-Site Request Forgery attacks. 
+  **422 Unprocessable Entity**!   422 is returned by the Rails ActionController by default when a POST doesn't contain a key, this is used to prevent **CSRF** - Cross-Site Request Forgery attacks. 
 
   To find out more about how you can get by this feature and hack your way into the heart of a Rails app, check out [WTF is 422?](http://blog.ethanvizitei.com/2008/04/wtf-is-422.html)!
 
-  BTW, this project was a scaled down version of Websniffer, above.
+  For a good one-hour summary of website security issues, especially in the context of Rails, I'm once again recommending this [video with Yehuda K. on Why Rails is Hard](https://www.youtube.com/watch?v=2Ex8EEv-WPs).
+
+  *BTW, if you didn't notice,* this project turned into a scaled down version of Websniffer, above.
 
 
 ### Hartl's Tutorial - [Chapter 3](http://ruby.railstutorial.org/chapters/static-pages#top) Misc points of interest
 
-- Chock full of good stuff.   We're just at the beginning of the tutorial but there's a bunch of good stuff here.  Some of this stuff may not seem to be interesting or relevant but I think it'll definitely come up at some point in your Rails endeavours.
+- Chock full of good stuff.   We're just at the beginning of the tutorial but there's already a variety of points we can hit on.  Some of this stuff may not seem to be interesting or relevant right now but I think it'll definitely come up at some point in your Rails endeavours.
 
 - *(Listing 3.1)* **The Gemfile** - Notice he locks down the version numbers so as to avoid incompatibilities between newest versions.
 
-  + I'm going with **Rails 4.0.2** and **Ruby 2.0.0** as per current Nitrous.io defaults;  and Hartl's versions for RSpec, sqlite3, pg, rails_12factor (test & production groups); let's see if I encounter any problems along the way...
+  + Btw, I went with **Rails 4.0.2** and **Ruby 2.0.0** as per current Nitrous.io defaults;  and I used Hartl's versions for RSpec, sqlite3, pg, rails_12factor (test & production groups); we'll see if I encounter any problems along the way...
 
-  + What is **rails_12factor**? A gem for static assets, required for Heroku deployment
+  + What is **rails_12factor**? A gem for static assets, required for Heroku deployment.
 
 
-- *Advice:* Look into **RVM** if you want to have multiple vers of Ruby on your box and be able to switch between them painlessly.
+- **RVM** comes up; look into it when you want/need to have multiple vers of Ruby on your box and be able to switch between them painlessly.
 
 
 - The first time, he **bundle installs** like so: ```bundle install --without production``` to not install production gems.  After 1st time, it remembers that option for future ```bundles install``` invocations.
@@ -181,13 +193,13 @@ rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackw
 + Don't forget to update your ```.gitignore``` to something like *[listing 1.7](http://ruby.railstutorial.org/chapters/beginning#code-gitignore)*
 
 
-- *(Box 3.2)* Undoing ```rails generate ...``` and ```rake db:migrate```
+- *(Box 3.2)* On **undoing** ```rails generate ...``` and ```rake db:migrate```
 
 
 - *(Box 3.3)* Mentions "previous versions of Rails used PUT in place of PATCH, and Rails 4.0 still supports this usage, but PATCH matches the intended HTTP usage better and is preferred for new applications."
 
 
-### *(3.2)* **Hartl kicks off the tutorials first tests** 
+### *(3.2)* **The Hartl tutorials first tests** 
 
 
 - "[In this chapter we are] starting off with **integration tests**, known as request specs in the context of RSpec, they allow us to simulate the actions of a user interacting with our application using a web browser."
@@ -198,7 +210,7 @@ rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackw
 
 - *(Listing 3.10)* Remember we have to tweak ```spec_helper.rb``` to include Capybara::DSL
 
-- I ran ```rspec spec```, he ran the more verbose ```bundle exec rspec spec/requests/static_pages_spec.rb``` ; **why?**
+- To invoke rspec, he uses the verbose ```bundle exec rspec spec/requests/static_pages_spec.rb``` ; **why?**
     
     - "so that the programs run in the exact gem environment specified by the Gemfile"
     
@@ -232,16 +244,22 @@ describe "Static pages" do
 end
 ```
 
+- A little later in [listing 3.19](http://ruby.railstutorial.org/chapters/static-pages#code-pages_controller_spec_title) we have tests for all 3 static pages.  Take a look so you can compare it to ...
+
 - Preview of **[tests refactoring in 5.3.4](http://ruby.railstutorial.org/chapters/filling-in-the-layout#sec-pretty_rspec)**
 
-    - Replace all the ```visit '/static_pages/help'``` (in Home, Help, and About tests) with just one ```before { visit root_path }``` just inside the first describe block.
+    - Replace all the ```visit '/static_pages/home'``` (in Home, Help, and About tests) with just one ```before { visit root_path }``` just inside the first describe block.
 
 ``` ruby
 describe "Home page" do
-  before { visit root_path }
-
+  before { visit root_path }          # uses route helper that we haven't look at yet,
+                                      # but basically, moved the 'visit's out of the 'it's
   it "should have the content 'Sample App'" do
     expect(page).to have_content('Sample App')
+  end
+
+  it "should have the title 'Home'" do
+    expect(page).to have_title("#{base_title} | Home")
   end
 
   # and so on...
@@ -256,7 +274,7 @@ describe "Home page" do
   describe "Home page" do
     before { visit root_path }
 
-    it { should have_content('Sample App') }
+    it { should have_content('Sample App') }     # now he switched form 'expect' to 'should'; hmm.
     it { should have_title('| Home') }
   end
 ```
