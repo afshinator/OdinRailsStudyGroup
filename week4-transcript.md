@@ -48,8 +48,6 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 ###### *ref: [ Kehoe](http://learn-rails.com/)*
 
 
-![alt text](./img/rrs.png "our logo")
-
 
 #### Instance Variables
 
@@ -100,9 +98,55 @@ Normal variables are available just in the method they are defined.  Instance va
 
   - I call mine [RestPinger](https://github.com/afshinator/playground/tree/master/RestPinger)
 
+  - Not the cleanest code!  Passing in a load of params in the hash is an anti-pattern!   
+  I took a crack at TDDing it, here are [tests](https://github.com/afshinator/playground/blob/master/RestPinger/restpinger_spec.rb),
+  lets take a quick look...
+
+  Note: How do I check the STDOUT output?, I hardcoded my Rails test app address
+
   - let's play with it...  Here is the rake:routes output that annotate_gem model puts in routes.rb:
 
-  **Hacking 101** : Forge the url that the browser would send your rails app; lets try some benign, and then some downright destructive stuff...
+  Try:
+
+``` ruby
+#  GET /post/:id  (#show)      
+rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts", :id => "3"} )  
+```
+
+  Voila!  We just mimicked a browser asking for a post from the blog.
+
+  Let's get mischevious, try:
+
+``` ruby 
+#  GET /post/new  (#new)         This is destructive; we're asking for database changes now!
+rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts/new"} )
+```
+
+  **401 Unauthorized**: HTTP Basic: Access denied....   Let's check it out in the browser:
+
+  Oh yeah, the RailGuides app used some authentication stuff in the posts controller...
+
+``` ruby
+class PostsController < ApplicationController
+  
+  http_basic_authenticate_with name: "afshin", password: "afshin", except: [:index, :show]  
+```
+
+  Lets take it out!  Try RestPinger with the above options again... we get the form back.
+
+  Now lets get really evil.  **Let's destroy an article!**  What should our url look like?  Now we need a DELETE not a GET, the id of the post, and ... thats it.
+
+``` ruby 
+#  DELETE /post/:id  (#destroy)         This is destructive!
+rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts",  :id => "2"} )
+```  
+
+  **422 Unprocessable Entity**!   422 is returned by the Rails ActionController by default when a POST doesn't contain a key, used to prevent **CSRF** - Cross-Site Request Forgery attacks. 
+
+  To find out more about how you can get by this feature and hack your way into the heart of a Rails app, check out [WTF is 422?](http://blog.ethanvizitei.com/2008/04/wtf-is-422.html)!
+
+  BTW, this project was a scaled down version of Websniffer, above.
+
 
 ![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
 
