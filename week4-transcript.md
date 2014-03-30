@@ -95,7 +95,7 @@ Things that make you go "hmmm",
 
   - Check for ```theodinproject.com``` 
 
-  - Do you know why we get a **301 Moved Permanently** ?
+  - *Quiz:* Do you know why we get a **301 Moved Permanently** ?     ( Hint: It's not a Rails issue, or anything we've covered in this studygroup before.)
 
 
 
@@ -110,6 +110,9 @@ Things that make you go "hmmm",
   Note: How do I check the STDOUT output?, I hardcoded my Rails test app address
 
   - let's play with it...  Here is the rake:routes output that annotate_gem model puts in routes.rb:
+
+![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
+
 
   Try:
 
@@ -151,9 +154,6 @@ rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackw
   To find out more about how you can get by this feature and hack your way into the heart of a Rails app, check out [WTF is 422?](http://blog.ethanvizitei.com/2008/04/wtf-is-422.html)!
 
   BTW, this project was a scaled down version of Websniffer, above.
-
-
-![alt text](./img/4-routes.rb1.png "routes from railstutorial app")
 
 
 ### Hartl's Tutorial - [Chapter 3](http://ruby.railstutorial.org/chapters/static-pages#top) Misc points of interest
