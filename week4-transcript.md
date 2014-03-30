@@ -22,7 +22,7 @@ Three is the magic number, but 4 gives you more!  **Welcome to Week 4!**
 
 Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
-**In code : **
+**In code :**
 
 - **Model** class name : capitalized, singular
 
@@ -40,7 +40,7 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
 - Controller matches class name, but snake_case : ```app/controllers/visitors_controller.rb```
 
-  Still true, even if you use CamelCase with ```rails generate``` - *(3.1)*
+  Still true, even if you use CamelCase with ```rails generate StaticPages home about``` - *(3.1)*
 
 - Views folder matches model class name, but plural and lowercase : ```app/views/visitors```
 
