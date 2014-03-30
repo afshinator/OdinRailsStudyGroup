@@ -49,7 +49,7 @@ Three is the magic number, but 4 gives you more!  **Welcome to Week 4!**
 
 
 
-#### Instance Variables
+#### Instance Variables in your Controller & View
 
 In a Rails controller, you'll often see a model assigned to an instance variable...
 
@@ -60,7 +60,7 @@ def index
 end
 ```
 
-Normal variables are available just in the method they are defined.  Instance variables are available anywhere inside the class. For example, ```@posts``` above.
+Normal variables are available just in the method they are defined.  Instance variables are available anywhere inside the class. For example, ```@posts``` above is accessible anywhere in the Controller object, and ...
 
 *Rails convention:* They are available not only to the controller, but also to your view!
 
@@ -68,8 +68,13 @@ Normal variables are available just in the method they are defined.  Instance va
 
 - Rails view is not a separate class; it's a template and part of the current controller object.
 
+- 4 minute [Lynda video](https://www.youtube.com/watch?v=NEvWizHVy2I) on this topic.
 
+
+Things that make you go "hmmm",
 ![alt text](./img/thought1.jpg "Think on these things")
+
+
 
 ### Article: treehouse's [An Intro to RSpec ](http://blog.teamtreehouse.com/an-introduction-to-rspec)
 
