@@ -18,9 +18,7 @@ Three is the magic number, but 4 gives you more!  **Welcome to Week 4!**
 
 
 
-#### Naming Conventions
-
-Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
+#### Naming Conventions for classnames and filenames
 
 **In code :**
 
@@ -40,7 +38,9 @@ Singular / Plural  , Uppercase / Lowercase, snake_case / CamelCase
 
 - Controller matches class name, but snake_case : ```app/controllers/visitors_controller.rb```
 
-  Still true, even if you use CamelCase with ```rails generate StaticPages home about``` - *(3.1)*
+  ( Rails generate command lets you use either camel or snake case to generate snake_case filename )
+
+  ```rails generate StaticPages home about``` - *(3.1)*
 
 - Views folder matches model class name, but plural and lowercase : ```app/views/visitors```
 
