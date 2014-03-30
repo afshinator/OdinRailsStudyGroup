@@ -128,7 +128,7 @@ Things that make you go "hmmm",
 
 ``` ruby
 #  GET /post/:id  (#show)      
-rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts", :id => "3"} )  
+rp = RestPinger.new({ :rails => true, :host => "http://my.nitrousbox.com/", :prefix => "posts", :id => "3"} )  
 ```
 
   Voila!  We just mimicked a browser asking for a post from the blog.
@@ -137,7 +137,7 @@ rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-7538
 
 ``` ruby 
 #  GET /post/new  (#new)         Remember this just asks for the new posts form;  #create actually creates it.
-rp = RestPinger.new({ :rails => true, :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts/new"} )
+rp = RestPinger.new({ :rails => true, :host => "http://my.nitrousbox.com/", :prefix => "posts/new"} )
 ```
 
   **401 Unauthorized**: HTTP Basic: Access denied....   Let's check it out in the browser:
@@ -156,7 +156,7 @@ class PostsController < ApplicationController
 
 ``` ruby 
 #  DELETE /post/:id  (#destroy)         This is destructive!
-rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "http://blackwater-bay-rails-75387.usw1.nitrousbox.com/", :prefix => "posts",  :id => "2"} )
+rp = RestPinger.new({ :rails => true, :verb => 'DELETE', :host => "my.nitrousbox.com/", :prefix => "posts",  :id => "2"} )
 ```  
 
   **422 Unprocessable Entity**!   422 is returned by the Rails ActionController by default when a POST doesn't contain a key, this is used to prevent **CSRF** - Cross-Site Request Forgery attacks. 
@@ -362,4 +362,28 @@ describe "Home page" do
 
 - better_errors
 
+
+---
+
+### For the coming week ...
+
+- We have officially finished [Introduction to Rails](http://www.theodinproject.com/ruby-on-rails).
+
+- Onto [Routes, Views, Controllers and Assets](http://www.theodinproject.com/ruby-on-rails#section-routes-views-controllers-and-assets)
+
+  + Not sure how quickly we can digest all the material; lots of reading from the Railsguides,
+
+  + Curriculum doesn't ask us to finish Hartl Chpt 5 until the Project.
+
+- As a goal, lets definitely **conquer Step 1: Routing** : all the curriculum reading and the RailsGuides stuff.
+
+  + Many of the videos out there reference older syntax in routes.rb file, so I recommend sticking to the Railsguides' [edge docs](https://github.com/rails/rails/blob/master/guides/source/routing.md).
+
+  [RailsCast #139 - Nested Resources](https://www.youtube.com/watch?v=3QVqojHFxs0) : outdated syntax, concepts are good though.
+
+- If time permits, go through [Hartl's Chpt 5](http://ruby.railstutorial.org/chapters/filling-in-the-layout#top)
+
+- If next week we get the sense that it was easy, we'll take on more.
+
+- Let's make another round at testing info, here's a somewhat longer video from [RailsConf 2013 on BDD & Acceptance Testing with RSpec and Capybara](https://www.youtube.com/watch?v=BG_DDUD4M9E)
 
