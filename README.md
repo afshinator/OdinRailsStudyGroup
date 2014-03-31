@@ -41,5 +41,11 @@
 **Week 4 - Review Hartl's Chpt 3,4; RESTClient project; More on testing, ...**
 
 - Sun, March 30th, 7:30pm PDT,
-[Week 4 Hangout Link](https://plus.google.com/u/0/events/c5j2kcpn7n0kitvg3138dnhnvg0)
+[Week 4 Hangout Video](https://www.youtube.com/watch?v=ek5yLPW2W2U)
+[Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week4-transcript.md)
 
+---
+
+**Week 5  - **
+
+- Sun, April 6th, 7:30pm PDT,
