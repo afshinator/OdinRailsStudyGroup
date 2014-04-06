@@ -11,38 +11,34 @@
 
 Four gives you more, but five is hella live!  **Welcome to Week 5: Routing**
 
-- Last week we did an overview of how a combo of HTTP verbs plus the url map to an 
-action in our Rails app's controller.  Routing is about *how* we go from request to 
-controller action.
+- Last week we did an overview of how a combo of HTTP verbs plus the url map to an action
+in our Rails app's controller.  Routing is about the mechanism in Rails that makes that 
+happen.
 
 
-- **The routing system does two things:** It maps requests to controller action methods, 
-and it enables the dynamic generation of URLs for you for use as arguments to methods like
-link_to and redirect_to.
+- **The routing system does two things:** 
+
+  It maps requests to controller action methods, and 
+  it enables the dynamic generation of URLs for you for use as arguments to methods like 
+  link_to and redirect_to.
 
 - I thought the [Routing Intro section on Odin](http://www.theodinproject.com/ruby-on-rails/routing)
- was an easily digestable, good read - 
-I'm not just saying that!
+ was an easily digestable good read! :-)
 
 - I had a hard time reading and learning the routing information from the RailsGuides!
 
-- Luckily basic routing is pretty... basic!  The concepts are pretty easy to get, the
-syntax and the details we'll have to do over-and-over for it to get natural.  Until then,
-this is yet another one of those things where we'll be looking up and copying and pasting
-code. 
+- Luckily basic routing is pretty... basic!  For me, I have to go over the syntax and the details 
+over-and-over for it to get natural.  Until then, this is yet another one of those things where I'll
+be looking up and copying and pasting code. 
 
-In this session I want to keep touching on the basics (RESTful routing), but also hit on 
-parts that we'll encounter as we journey outside the world of tutorial apps, and into 
-the "real world".
-
-Let's quickly look at routing in the context of the oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).  
-Then we'll parse the routes file from the Odin project - which is not boring!
+Let's take a look at routing in the context of the oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).  
+Then we'll parse the routes file from the Odin project.
 
 ---
 
 ### Routing in Devise
 
-- ```devise_for``` -  Generates all needed routes for itself in routes.rb 
+- ```devise_for``` -  Generates a load of routes in routes.rb 
 based on what modules you have defined in your model;  
 [example:](http://rubydoc.info/github/plataformatec/devise/master/ActionDispatch/Routing/Mapper)
 
@@ -68,9 +64,11 @@ new_user_confirmation GET    /users/confirmation/new(.:format) {controller:"devi
 ```
 
 
-- **[Odin's ```routes.rb```](https://github.com/TheOdinProject/theodinproject/blob/master/config/routes.rb)**
+- Now for **[Odin's ```routes.rb```](https://github.com/TheOdinProject/theodinproject/blob/master/config/routes.rb)**
 
-  Remember, order matters in the routes.rb file, lets go from top down:
+  Going from the top of the file, the ```devise_for``` below is a bit more complicated than above.  In the 
+  screenshot below I've highlighted the sections that correspond to the example above so we can see more 
+  easily see what the Odin version is doing :
 
 ``` ruby
 devise_for :users, :controllers => { :registrations => "registrations" }  # lines 12-18 in picture below
@@ -82,15 +80,17 @@ devise_for :users, :controllers => { :registrations => "registrations" }  # line
   end
 ```
 
+![alt text](./img/OdinRoutes1.jpg "odin1")
+
 - What is this: ```:users, :controllers => { :registrations => "registrations" }``` ?
 
-  It's telling the router that for the user resource, use the registrations controller 
+  It's telling the router to add registration routes for users, mapped to the registration controller.
 
 - How about: ```devise_scope :user do``` ?
 
   Also know as ```as```, if you have custom routes, its required in order to specify which controller is targeted : 
 
-```
+``` ruby
 as :user do                 # notice it is singular
    get "/some/route" => "some_devise_controller"
 end
@@ -102,20 +102,18 @@ devise_for :users            # notice its now pluralized
   use the singular form of the noun where other devise route commands expect the plural form.
 
 
-![alt text](./img/OdinRoutes1.jpg "odin1")
-
 ---
 
 This next set is easier to decode:
 
 ``` ruby
   root :to => 'static_pages#home'					    # line 23 in picture below
-  get 'home' => 'static_pages#home'					  # line 24;  /home also goes to root of site
-  get 'scheduler' => redirect('/courses')			# line 25;  notice this generates a 301
+  get 'home' => 'static_pages#home'					    # line 24;  /home also goes to root of site
+  get 'scheduler' => redirect('/courses')			    # line 25;  notice this generates a 301
   post 'thank_you' => 'static_pages#send_feedback'	
   post 'suggestion' => 'static_pages#suggestion'	
   get 'students' => 'users#index'					    # line 28; users controller
-  get 'about' => "static_pages#about"         # line 29-36 : the static_pages controller
+  get 'about' => "static_pages#about"               # line 29-36 : the static_pages controller
   get 'faq' => "static_pages#faq"
   get 'contact' => "static_pages#contact"			# ...
   get 'contributing' => "static_pages#contributing"
@@ -132,9 +130,9 @@ This next set is easier to decode:
 ---
 
 Then, the good ol', resourceful one call to seven actions: ```resources: cal_events```; 
-***notice PUT & PATCH** are both routed to update action...:
+**notice PUT & PATCH** are both routed to update action...:
 
-```
+``` ruby
 #               cal_events GET    /cal_events(.:format)                cal_events#index
 #                          POST   /cal_events(.:format)                cal_events#create
 #            new_cal_event GET    /cal_events/new(.:format)            cal_events#new
@@ -152,15 +150,15 @@ but keeps track that it was a PATCH.
 
 Then,
 
-```
+``` ruby
   resources :users, :only => [:show, :index, :edit, :update] do
     resource :contact, :only => [:new, :create]
   end
 ```  
 
-  Notice there is a nested resource.  This block maps to:
+  Notice there is a **nested resource**.  This block maps to:
 
-```
+``` ruby
 #             user_contact POST   /users/:user_id/contact(.:format)      contacts#create
 #         new_user_contact GET    /users/:user_id/contact/new(.:format)  contacts#new
 
@@ -175,7 +173,7 @@ Then,
 
 Then, two resources with :only specifications:
 
-```
+``` ruby
   resources :splash_emails, :only => [:create]
 
   resource :forum, :only => [:show]
@@ -183,7 +181,7 @@ Then, two resources with :only specifications:
 
   Mapping to:
 
-```
+``` ruby
 #            splash_emails POST   /splash_emails(.:format)               splash_emails#create
 #                    forum GET    /forum(.:format)                       forums#show
 ```
@@ -193,14 +191,14 @@ Then, two resources with :only specifications:
 
 Then, these are for checking off lessons completed, note the the HTTP verbs:
 
-```
+``` ruby
   post 'lesson_completions' => 'lesson_completions#create'
   delete 'lesson_completions/:lesson_id' => 'lesson_completions#destroy', :as => "lesson_completion"
 ```
 
   Mapping to:
 
-```
+``` ruby
 #       lesson_completions POST   /lesson_completions(.:format)            lesson_completions#create
 #       lesson_completion DELETE /lesson_completions/:lesson_id(.:format)  lesson_completions#destroy
 ```  
@@ -210,13 +208,13 @@ Then, these are for checking off lessons completed, note the the HTTP verbs:
 
 Then
 
-```
+``` ruby
   get "sitemap" => "sitemap#index", :defaults => { :format => "xml" }
 ```
 
   Mapping to:
 
-```
+``` ruby
 #                  sitemap GET    /sitemap(.:format)                       sitemap#index {:format=>"xml"}
 ```  
 
@@ -241,7 +239,7 @@ Then, the courses and lessons routes
 
   Mapping to:
 
-```
+``` ruby
 #               curriculum GET    /curriculum(.:format)                                redirect(301, /courses)
 #                  courses GET    /courses(.:format)                                   courses#index
 #                          GET    /courses/:course_name(.:format)                      redirect(301, /%{course_name})
@@ -263,9 +261,9 @@ Then, the courses and lessons routes
 
 ### Knick - Knacks
 
-**List of routes** - Did you know you can go to ```server/rails/info/routes``` in dev environment?
+**List of routes** - Did you know you can use ```server/rails/info/routes``` in dev environment?
 
-- Just like going to a bad route gives you a listing, except no error message.
+- It's just like when you go to a bad route & it gives you a listing, except no error message.
 
 
 
@@ -289,7 +287,6 @@ it "routes to the 'show' action" do
       foo_id: "123",
       id: "456"
 end
-
 ```
 
 - another [RSPEC](https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs) example
@@ -299,30 +296,28 @@ end
 
 Will teach you plenty about routing, testing them, and more...; here is a sampling:
 
-- Starts off talking about ```only:``` and ```except:```
-
 - **Constraints** - Enforces subdomain
 
-```resources :thingies, constraints:{ subdomain: 'api'}   # http://api.foo.com/thingies```
+```resources :thingies, constraints:{ subdomain: 'api'}                  # http://api.foo.com/thingies```
 
 - **Namespaces** - Mapping a URI pattern with a subdir to a controller in its own subdir
 
 ``` ruby
-namesapce :api do
+namespace :api do
   resources :thingies, only: :index
 end
 
 # maps to 
-# Prefx        Verb    URI Pattern                Controller#Action
+# Prefix       Verb    URI Pattern                Controller#Action
   api_thingies GET     /api/thingies(.:format)    api/thingies#index {:subdomain=>"api"}
 
  ```
 
 ---
 
-** Path Segmented Expansion ** - Just means Arguments in the URI are separated using a slash.
+**Path Segmented Expansion** - Just means Arguments in the URI are separated using a slash.
 
-```
+``` ruby
 /thingies
 /thingies/:id
 /thingies/:id/majigies
@@ -332,7 +327,7 @@ end
 Most URI's will not depend on **query string parameters**, 
 - So a route like ```thingies?id=1``` will route to ```Thingies#index```, and not ```Thingies#show```
 
-But it's ok to use them in certain cases:
+But it's ok to use query string parameters in certain cases:
 
 - **filters** - ```/thingies?food=grain```  ; sent to the index action where filter code is run
 
@@ -349,7 +344,7 @@ And while we're here,
 
 - ```match '/items/:id/purchase', to: 'items#purchase'``` matches *any* HTTP verb
 
-  Fails in Rails 4 cuz it opens it up to **Cross-site Scripting (XSS) attack**:
+  Fails in Rails 4 cuz it opens it up to **Cross-site Scripting (XSS) attack**; an example:
 
   ```<a href="http://yourapp.com/items/4/purchase">Click to win!</a>```
 
@@ -360,13 +355,13 @@ And while we're here,
   ```match '/items/:id/purchse', to: 'items#purchse', via: :post```,  or via: :all if need be
 
 
-**Nested Resources and Concerns** - to keep code looking DRY
+**Nested Resources and [Concerns](http://edgeguides.rubyonrails.org/routing.html#routing-concerns)** - to keep code DRY
 
 ``` ruby
 resources :messages do
   resouces :comments
-  resouces : categories
-  resouces : tags
+  resouces :categories
+  resouces :tags
 end
 
 resources :posts do
@@ -403,10 +398,7 @@ and **put it in its own file**!
 
 - We'll encounter a bunch as we go through Hartl
 
-- Again, take a look at those videos because they cover a range of good stuff
-
--
-
+- Again, take a look at CodeSchool videos because they cover a range of good stuff, and many start off free.
 
 
 
