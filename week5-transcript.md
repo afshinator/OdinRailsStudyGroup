@@ -36,7 +36,6 @@ be looking up and copying and pasting code for a while.
 
 
 
-
 Let's take a look at routing in the context of the oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).  
 Then we'll parse the routes file from the Odin project.
 
