@@ -317,7 +317,7 @@ end
 
 **Path Segmented Expansion** - Just means Arguments in the URI are separated using a slash.
 
-``` ruby
+```
 /thingies
 /thingies/:id
 /thingies/:id/majigies
@@ -403,10 +403,14 @@ and **put it in its own file**!
 
 
 
-**ASCIIcasts screencasts** on routing (in Rails 3) - haven't had time to explore them
+### For Next Week:
 
-- http://asciicasts.com/episodes/203-routing-in-rails-3
+- Controllers
 
-- http://asciicasts.com/episodes/231-routing-walkthrough
+  [RailsGuides on Controllers](http://edgeguides.rubyonrails.org/action_controller_overview.html) -
+  sections 1 - 4.5.3 and 5.2
 
-- http://asciicasts.com/episodes/232-routing-walkthrough-part-2
+  [Mass-Assignment & Strong parameters](http://www.sitepoint.com/rails-4-quick-look-strong-parameters/)
+
+
+
