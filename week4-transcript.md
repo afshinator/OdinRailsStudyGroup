@@ -22,11 +22,11 @@ Three is the magic number, but 4 gives you more!  **Welcome to Week 4!**
 
 **In code :**
 
-- **Model** class name : capitalized, singular
+- **Model** class name : **capitalized, singular**
 
   ```class Visitor < ActiveRecord::Base```
 
-- **Controller** : pluralized model name with “Controller” in CamelCase
+- **Controller** : **pluralized** model name with “Controller” in CamelCase
 
   ```class VisitorsController < ApplicationController```
 
