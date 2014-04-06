@@ -32,11 +32,31 @@ over-and-over for it to get natural.  Until then, this is yet another one of tho
 be looking up and copying and pasting code for a while. 
 
 - Also last week we looked at the 
-[RailsGuides' Getting Started App's routes file](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week4-transcript.md/#railsguidesroutes).  
-That was a nice example of a simple nested route.
+[RailsGuides' Getting Started App's routes file](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week4-transcript.md#odins-restclient-project).  
+That was a nice example of **Nested Resources**.
+Let's take quick looksy again.
+
+  First, the ```resoures``` part is telling the router that we want RESTful routes for posts resources; 
+  that is, posts_url, edit_post_url, edit_post_path, etc... 
+
+  We also want RESTful routes for comments: post_comments_url, new_post_comment_url, and so on. Notice how
+  these helpers start with post.
+
+  The nested resource also tells Rails that whenever we use the comment route helpers, we wil provide a
+  post to relate it to.  That translates into an argument to the named route method:
+
+  ```link_to "See all comments", post_comment_path(post)```
+
+  So now the router will add the ```/posts/4``` part before the ```/comments``` part.  And now in
+  ```comments/index``` we'll have the id of the post in ```params[:post_id]```.
+
+  This [excerpt from The Rails Ways](http://www.informit.com/articles/article.aspx?p=1671632&seqNum=7)
+  goes into some more details.
 
 
-Let's take a look at routing in the context of the oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).
+
+Now let's get a little more real-worldsy! Let's take a look at routing in the context of the 
+oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).
 Then we'll parse the routes file from the Odin project.
 
 ---

@@ -117,8 +117,6 @@ Things that make you go "hmmm",
 
     then try passing in a hash that does a search at ask.com,
 
-<a id="railsguidesroutes"></a>
-
   - Here is the rake:routes output that annotate_gem model puts 
   in routes.rb (from RailsGuides' starter app): 
 
