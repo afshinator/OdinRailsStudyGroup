@@ -49,7 +49,7 @@ based on what modules you have defined in your model;
 Let's say you have a good ol' User model, and in your ```routes.rb``` you have ```devise_for :users```; 
 it'll look inside your model and create the needed routes:
 
-```
+``` ruby
 # Session routes for Authenticatable (default)
      new_user_session GET    /users/sign_in                    {controller:"devise/sessions", action:"new"}
          user_session POST   /users/sign_in                    {controller:"devise/sessions", action:"create"}
@@ -72,7 +72,7 @@ new_user_confirmation GET    /users/confirmation/new(.:format) {controller:"devi
 
   Remember, order matters in the routes.rb file, lets go from top down:
 
-```
+``` ruby
 devise_for :users, :controllers => { :registrations => "registrations" }  # lines 12-18 in picture below
   devise_scope :user do
     get '/login' => 'devise/sessions#new'								# line 19 to line 4
@@ -102,13 +102,13 @@ devise_for :users            # notice its now pluralized
   use the singular form of the noun where other devise route commands expect the plural form.
 
 
-![alt text](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/img/OdinRoutes1.jpg "odin1")
+![alt text](./img/OdinRoutes1.jpg "odin1")
 
 ---
 
 This next set is easier to decode:
 
-```
+``` ruby
   root :to => 'static_pages#home'					    # line 23 in picture below
   get 'home' => 'static_pages#home'					  # line 24;  /home also goes to root of site
   get 'scheduler' => redirect('/courses')			# line 25;  notice this generates a 301
@@ -127,7 +127,7 @@ This next set is easier to decode:
 
 ```
 
-![alt text](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/img/OdinRoutes2.jpg "odin2")
+![alt text](./img/OdinRoutes2.jpg "odin2")
 
 ---
 
@@ -224,7 +224,7 @@ Then
 
 Then, the courses and lessons routes 
 
-```
+``` ruby
   get 'curriculum' => redirect('/courses')
   get 'courses' => 'courses#index'
 
@@ -256,8 +256,9 @@ Then, the courses and lessons routes
   In the above, ```:as``` lets you specify a name for your route;  
   so the app now can use course_path, course_url, lessons_path, lessons_url in controllers, helpers and views.
 
----
+![alt text](./img/study3.jpg "odin2")
 
+---
 
 
 ### Knick - Knacks
@@ -270,11 +271,11 @@ Then, the courses and lessons routes
 
 **Testing Routes** - Rails offers three built-in assertions
 
-- ```assert_generates```
+-```assert_generates```
 
-- ```assert_recognizes```
+-```assert_recognizes```
 
-- ```assert_routing```
+-```assert_routing```
 
 - or you can use [RSpec](http://rubydoc.info/gems/rspec-rails/frames)'s 
 ```routes_to``` matcher, 
@@ -306,7 +307,7 @@ Will teach you plenty about routing, testing them, and more...; here is a sampli
 
 - **Namespaces** - Mapping a URI pattern with a subdir to a controller in its own subdir
 
-```
+``` ruby
 namesapce :api do
   resources :thingies, only: :index
 end
@@ -361,7 +362,7 @@ And while we're here,
 
 **Nested Resources and Concerns** - to keep code looking DRY
 
-```
+``` ruby
 resources :messages do
   resouces :comments
   resouces : categories

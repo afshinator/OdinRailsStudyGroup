@@ -46,6 +46,7 @@
 
 ---
 
-**Week 5  - **
-
+**Week 5  - Routing**
+[Week 5 Hangout Link](https://plus.google.com/u/0/b/112041900311777032328/events/c5f8a60f33a0m092a3aug6r2kro)
+[Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week5-transcript.md)
 - Sun, April 6th, 7:30pm PDT,
