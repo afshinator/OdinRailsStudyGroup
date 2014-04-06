@@ -29,7 +29,12 @@ happen.
 
 - Luckily basic routing is pretty... basic!  For me, I have to go over the syntax and the details 
 over-and-over for it to get natural.  Until then, this is yet another one of those things where I'll
-be looking up and copying and pasting code. 
+be looking up and copying and pasting code for a while. 
+
+- Also last week we looked at the RailsGuides' Getting Started App's routes file.
+
+
+
 
 Let's take a look at routing in the context of the oh-so-prevalent [Devise authentication gem](https://github.com/plataformatec/devise).  
 Then we'll parse the routes file from the Odin project.
@@ -292,9 +297,10 @@ end
 - another [RSPEC](https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs) example
 
 
-### [CodeSchool-Rails Web APIs with Test](https://www.codeschool.com/courses/surviving-apis-with-rails)
+### [CodeSchool - Surviving API's with RAILS](https://www.codeschool.com/courses/surviving-apis-with-rails)
 
-Will teach you plenty about routing, testing them, and more...; here is a sampling:
+New video, (first episode free and full of routing stuff) will teach you plenty about routing, 
+testing them, and more...; here is a sampling:
 
 - **Constraints** - Enforces subdomain
 
