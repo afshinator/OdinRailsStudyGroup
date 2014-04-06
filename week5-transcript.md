@@ -31,7 +31,8 @@ happen.
 over-and-over for it to get natural.  Until then, this is yet another one of those things where I'll
 be looking up and copying and pasting code for a while. 
 
-- Also last week we looked at the RailsGuides' Getting Started App's routes file.
+- Also last week we looked at the 
+[RailsGuides' Getting Started App's routes file](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week4-transcript.md/#RailsGuidesRoutes).
 
 
 
