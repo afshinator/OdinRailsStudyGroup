@@ -46,21 +46,21 @@ Let's take quick looksy again.
   We also want RESTful routes for comments: post_comments_url, new_post_comment_url, and so on. Notice how
   these helpers start with post.
 
-  The nested resource also tells Rails that whenever we use the comment route helpers, we wil provide a
-  post to relate it to.  That translates into an argument to the named route method:
+  The nested resource also tells Rails that whenever we use the comment route helpers, we will provide a
+  post to relate it to.  See the argument to the named route method:
 
   ```link_to "See all comments", post_comment_path(post)```
 
   So now the router will add the ```/posts/4``` part before the ```/comments``` part.  And now in
   ```comments/index``` we'll have the id of the post in ```params[:post_id]```.
 
-  Nesting resources beyond 1 level deep is an anti-pattern.
+  Note: Nesting resources beyond 1 level deep is allowed, but considered an anti-pattern.
 
   This [excerpt from The Rails Way](http://www.informit.com/articles/article.aspx?p=1671632&seqNum=7)
   goes into some more detail.
 
 
-- **Singular and Plural RESTful Routes** ; [ref: The Rails Way](http://www.informit.com/store/rails-3-way-9780321601667)
+- **Singular and plural RESTful Routes [helper methods]** ; [ref: The Rails Way](http://www.informit.com/store/rails-3-way-9780321601667)
 
   "Some of the RESTful routes [helpers] are singular; some are plural. The logic is as follows:
 
@@ -73,7 +73,7 @@ Let's take quick looksy again.
 
   ```item_url(item)         # show, update, or destroy, depending on HTTP verb```
 
-  You don’t have to call theidmethod onitem. Rails will figure it out (by calling to_param on the 
+  You don’t have to call the id method on item. Rails will figure it out (by calling ```to_param``` on the 
   object passed to it)."
 
 
@@ -90,8 +90,8 @@ end
 
   What does this do : ```resource :profile``` ?    (Notice its singular)
 
-  It's useful when there's only one resource of its type for the whole application; for example a
-  per-user profile.  You get all the resource routes, just like using ```resources`` except for the
+  It's used when there's only one resource of its type for the whole application; for example: a
+  per-user profile.  You get all the resource routes, just like using ```resources``` except for the
   index route which is for collections.   
 
   So then ```resource```, the arguments to it, and all the named routes generated are in the singular.
@@ -482,6 +482,11 @@ and **put it in its own file**!
   sections 1 - 4.5.3 and 5.2
 
   [Mass-Assignment & Strong parameters](http://www.sitepoint.com/rails-4-quick-look-strong-parameters/)
+
+- Hartl Chpt 5
+
+  Might as well finish it off sooner rather than later.  Odin curriculum doesn't require it until
+  the [next project](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers).
 
 
 
