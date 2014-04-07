@@ -5,7 +5,7 @@
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-- [Week 5 Hangout Video]()
+- [Week 5 Hangout Video](https://www.youtube.com/watch?v=r4_52h751HI)
 
 ---
 
@@ -259,7 +259,7 @@ Then, two resources with :only specifications:
 ---
 
 
-Then, these are for checking off lessons completed, note the the HTTP verbs:
+Then, these are for checking off lessons completed, note the HTTP verbs:
 
 ``` ruby
   post 'lesson_completions' => 'lesson_completions#create'
@@ -483,10 +483,11 @@ and **put it in its own file**!
 
   [Mass-Assignment & Strong parameters](http://www.sitepoint.com/rails-4-quick-look-strong-parameters/)
 
-- Hartl Chpt 5
+- Hartl Chpt 5, 6, 7 !
 
-  Might as well finish it off sooner rather than later.  Odin curriculum doesn't require it until
+  Might as well finish it off sooner rather than later.  Odin curriculum doesn't require chpt 5 until
   the [next project](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers).
 
-
+- This is from last week, we didn't get to it.  Let's try to get to this. 
+[RailsConf 2013 on BDD & Acceptance Testing with RSpec and Capybara](https://www.youtube.com/watch?v=BG_DDUD4M9E)
 
