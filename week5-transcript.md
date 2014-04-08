@@ -416,7 +416,8 @@ And while we're here,
 - ```match '/items/:id/purchase', to: 'items#purchase'``` matches *any* HTTP verb
 
 - As you would guess it creates the mapping from URI & HTTP verb to controller + action, 
-and also creates the helper purchase_path, purchase url.
+but also creates the helper purchase_path, purchase url (named routes for use in controllers
+and views).
 
 
 - But we aware in Rails 4 *it fails* cuz of **Cross-site Scripting (XSS) attack** concerns; an example:
