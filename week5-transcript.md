@@ -415,15 +415,23 @@ And while we're here,
 
 - ```match '/items/:id/purchase', to: 'items#purchase'``` matches *any* HTTP verb
 
-  Fails in Rails 4 cuz it opens it up to **Cross-site Scripting (XSS) attack**; an example:
+- As you would guess it creates the mapping from URI & HTTP verb to controller + action, 
+and also creates the helper purchase_path, purchase url.
+
+
+- But we aware in Rails 4 *it fails* cuz of **Cross-site Scripting (XSS) attack** concerns; an example:
 
   ```<a href="http://yourapp.com/items/4/purchase">Click to win!</a>```
 
 - Must specify HTTP method :
 
-  ```post '/items/:id/purchase', to: 'items#purchase'```  or
-
   ```match '/items/:id/purchse', to: 'items#purchse', via: :post```,  or via: :all if need be
+
+  or equivalently:
+
+  ```post '/items/:id/purchase', to: 'items#purchase'    # instead of match do a post``` 
+
+
 
 
 **Nested Resources and [Concerns](http://edgeguides.rubyonrails.org/routing.html#routing-concerns)** - to keep code DRY
