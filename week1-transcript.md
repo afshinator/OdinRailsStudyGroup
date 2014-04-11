@@ -84,6 +84,10 @@
 
 #### **Odds & Ends**
 
+- Rails has 3 different environments: **development, test, and production**
+
+  Read this brief [bit from Hartl chpt 7, Box 7.1](http://ruby.railstutorial.org/chapters/sign-up) 
+  about how to oprete in each.
 
 - [astonj's opinionated guide to learning Ruby and Rails](http://astonj.com/tech/best-way-to-learn-ruby-rails/)
 
