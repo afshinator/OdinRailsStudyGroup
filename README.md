@@ -54,6 +54,6 @@
 ---
 
 **Week 6 - The Controller**
-[Week 6 Hangout Event - Coming soon](),
-[Transcript - Coming soon]()
+[Week 6 Hangout Video](https://www.youtube.com/watch?v=-XI1KVtEsdY#t=14),
+[Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week6-transcript.md)
 - Sun, April 13th, 7:30pm PDT,
