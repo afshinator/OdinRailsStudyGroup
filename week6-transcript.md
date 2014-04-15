@@ -158,7 +158,7 @@ RSpec pumps out is natural.
 then skip all the way up to acceptance tests. This approach gives great code 
 coverage and builds a test suite that can flex with a changing codebase."*
 
-<<< picture of request-response-cycle >>>
+![alt text](./img/request-response-cycle.jpg "odin1")
 
 In above picture, the 'outside' is the Views and the Models.  So **testing from the outside-in** means to write acceptance tests (coming in through the view) and writing unit tests (in through the model); and eventually writing integration tests (flexing the controller) when the feature set and the code
 stabilizes.
