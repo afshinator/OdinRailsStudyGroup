@@ -47,13 +47,15 @@
 ---
 
 **Week 5  - Routing**
+
+- Sun, April 6th, 7:30pm PDT,
 [Week 5 Hangout Video](https://www.youtube.com/watch?v=r4_52h751HI),
 [Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week5-transcript.md)
-- Sun, April 6th, 7:30pm PDT,
 
 ---
 
 **Week 6 - The Controller**
+
+- Sun, April 13th, 7:30pm PDT,
 [Week 6 Hangout Video](https://www.youtube.com/watch?v=-XI1KVtEsdY#t=14),
 [Transcript](https://github.com/afshinator/OdinRailsStudyGroup/blob/master/week6-transcript.md)
-- Sun, April 13th, 7:30pm PDT,
