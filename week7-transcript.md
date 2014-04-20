@@ -33,7 +33,7 @@ Here's a short & sweet explanation (from [this source](https://devcenter.heroku.
 # gem 'unicorn'
   ```
 
-**That's the quick and dirty of it, **  let's try to understand the issues a little further...
+**That's the quick and dirty of it,**  let's try to understand the issues a little further...
 
 **Background jobs and threads** -  a relevant aside to app servers.
 
@@ -41,11 +41,11 @@ Here's a short & sweet explanation (from [this source](https://devcenter.heroku.
 
 In the 'traditional' means of deploying a Rails app, an individual Rails process can only handle one request at a time. From when the request comes in until the response is delivered, all the app can do is deal with that one thing. If other requests come in during this time, they need to be kept in line waiting, and then they are handled one at a time, "serially".
 
-This is an inefficient use of CPU resources, and especially bad when some of that 'blocked' time is spent waiting on external I/O, as is typical in a web app.  It also can lead to very uneven response times, as some requests end up spending a lot of waiting in line to be processed, and others don't.
+This is an inefficient use of CPU resources, and especially bad when some of that 'blocked' time is spent waiting on external I/O, as is typical in a web app.  It can also lead to very uneven response times, as some requests end up spending a lot of waiting in line to be processed, and others don't.
 
-Lets say for example your app wants to send emails.  This can slow response time because you've busied the server doing something other than waiting and processing page requests.
+Lets say for example your app wants to send emails.  This can slow response time because you've busied the machine doing something other than processing page requests, something that is also I/O intensive.
 
-There are two solutions:
+There are two basic solutions that involve a combo of hardware & software:
 
 - The most common is the **multi-process concurrency model**.  Each Rails process can still only handle one request at a time, but you run multiple processes (aka, multiple workers). Perhaps as many workers as you have CPU cores, or even more if you can afford the RAM.
 
@@ -53,16 +53,12 @@ There are two solutions:
 
     Here is [a good article on Running Rails jobs in the background](https://www.agileplannerapp.com/blog/building-agile-planner/rails-background-jobs-in-threads), and once you finished that, read [this](http://tenderlovemaking.com/2012/06/18/removing-config-threadsafe.html) for more on threads in Rails.
     
-- Yet another is **a hybrid** model where you have multiple worker processes, each of which dispatches multi-threaded
+- Yet another is **a hybrid** model where you have multiple worker processes, each of which dispatches multi-threaded processes.
 
-  Each of these has their pluses and minuses.  "While Heroku is currently recommending a multi-process model with Unicorn, ... if your app can be run safely under multi-threaded request dispatch, a multi-threaded model would actually provide better throughput.." - this is a quote from [this excellent article and github app](https://github.com/jrochkind/fake_work_app) 
-  that benchmarks some of this stuff!
+Each of these has their pluses and minuses.  "While Heroku is currently recommending a multi-process model with Unicorn, ... if your app can be run safely under multi-threaded request dispatch, a multi-threaded model would actually provide better throughput.." - this is a quote from [this excellent article and github app](https://github.com/jrochkind/fake_work_app) that does some rocket science to benchmarks this stuff!
 
 
-So, some app servers are better at running multi-processes and multi-threding than others, and **There's a bunch of app servers out there**.
-
-Generally, you want to look at: their use cases, configuration options, and perfomance.
-Reconcile these with your application needs.
+So, some app servers are better at dealing with multi-processes and multi-threading than others, which do you choose?  Generally, you'll want to look at: their stated and proven use cases, configuration options, and of course perfomance.  Reconcile these with your application needs.
 
 **Here's four popular Rails App Server options**:
 
@@ -72,7 +68,7 @@ Reconcile these with your application needs.
 
 - **Unicorn** app server
 
-  Multi-process, fast client/request execution; less "wtf" than Pasenger.
+  Multi-process, fast client/request execution; less "wtf" than Pasenger.  
 
 - **Thin** app server
 
@@ -80,24 +76,26 @@ Reconcile these with your application needs.
 
 - **Puma** app server
 
-  Multi-threaded: cconcurrent request processing, runs a request in a new thread; anything that can benefit from 
+  Multi-threaded: concurrent request processing, runs a request in a new thread; anything that can benefit from 
   truly concurrent execution would make Puma a good choice.  Benchmarks results: looks like hybrid/clustered/multi-worker puma is likely to provide significant advantage for an io-bound app, as most web apps are.
 
-**Conclusion** - There's not really any reason I know of to use the default WEBrick, even in development.  Check out [**Jumpstart ContactManager**, one of the lesser known Rails tutorials](http://tutorials.jumpstartlab.com/projects/contact_manager.html) out there; it uses Unicorn.  Heroku recommends Unicorn on the website;  Brian mentioned some Heroku folks talking a lot about Puma at the recent Ruby conference.  The best decision will rely on the needs of your app, here is some references to help you get up to speed on all this stuff:
+**Conclusion** - There's not really any reason I know of to use the default WEBrick, even in development.  Check out [**Jumpstart ContactManager**, one of the lesser known Rails tutorials](http://tutorials.jumpstartlab.com/projects/contact_manager.html) out there; it uses **Unicorn**.  Heroku recommends Unicorn on their website;  Brian mentioned some Heroku folks talking a lot about Puma at the recent Ruby conference.  The best decision will depend on the needs of your app and in a successful app those needs will change in time.  
 
+Here is some references to help you get deeper knowledge on this stuff:
 
-[Slideshare on comparing app servers; general info](http://www.slideshare.net/jaustinhughey/app-server-arena-a-comparison-of-ruby-application-servers) - Good overview.
+- [Slideshare on comparing app servers; general info](http://www.slideshare.net/jaustinhughey/app-server-arena-a-comparison-of-ruby-application-servers) - Good overview.
 
-[Benchmark app on github, and results](https://github.com/jrochkind/fake_work_app) - Awesome stuff, chuck full of info.
+- [Benchmark app on github, and results](https://github.com/jrochkind/fake_work_app) - Awesome stuff, chuck full of info.
 
-[Another comparison from Digital Ocean](https://www.digitalocean.com/community/articles/a-comparison-of-rack-web-servers-for-ruby-web-applications)
+- [Another comparison from Digital Ocean](https://www.digitalocean.com/community/articles/a-comparison-of-rack-web-servers-for-ruby-web-applications)
 
-[Threading in Rails](http://tenderlovemaking.com/2012/06/18/removing-config-threadsafe.html)
+- [Threading in Rails](http://tenderlovemaking.com/2012/06/18/removing-config-threadsafe.html)
 
-[Engineyard Passenger, Unicorn, or Puma? article](https://www.engineyard.com/articles/rails-server)
+- [Engineyard Passenger, Unicorn, or Puma? article](https://www.engineyard.com/articles/rails-server)
 
-[Puma on Heroku](http://blog.codeship.io/2013/10/16/unleash-the-puma-on-heroku.html)
+- [Puma on Heroku](http://blog.codeship.io/2013/10/16/unleash-the-puma-on-heroku.html)
 
+---
 
 ### Views
 
@@ -109,8 +107,7 @@ Passing data from the controller to the view
   controller; so inside the view : ```<%= @user.first_name %>```, etc...
 
 - Ivars are available in partials as well as layouts, but it's common to instead explicitly pass an 
-  ivar to a partial from a view as a local var;  
-  So for example, in your app/views/some_controller/show.html.erb:
+  ivar to a partial from a view as a local var;  So for example, in your app/views/some_controller/show.html.erb:
 
   ```<%= render "fancy_title", title: @item.title %>```, 
 
@@ -121,10 +118,10 @@ Passing data from the controller to the view
   *Syntax reference* [RailsGuides' section 3.4.6 on Local Variables within a partial](http://guides.rubyonrails.org/layouts_and_rendering.html)
 
 
-  The partial is not tied to any specific ivar.  This makes the partials easier to re-use and move around.
+  The advantage of passing the ivar to the partial as a local-to-the-partial variable: the partial is not tied to any specific ivar.  This makes the partials easier to re-use and move around.
 
 
-- You can extend this idea to action views; instead of relying on the presence of an ivar from the controller in your view, make an explicit call to ```render```, providing what local variables will be called that are copies of the instance variable...  So in your thing_controller.rb:
+- You can extend this idea to action views in general; instead of relying on the presence of an ivar from the controller in your view, make an explicit call to ```render```, passing values that will be used...  So in your thing_controller.rb:
 
 ```ruby
 def show
@@ -140,15 +137,15 @@ So, why do this with action views and not just partials?
 
 - Instance variables can be set all over the place. For example, before filters in the current controller, or before filters in a parent controller. If you don’t pass them explicitly to each view,  it's harder to know where the value came from.
 
-- If you forget to set the ivar in the controller, it would be ```nil``` in the view without you immediately knowing why.  If you forget to pass it in the above method, you get an error right away.
+- If you forget to set the ivar in the controller, it would be ```nil``` in the view without you immediately knowing why.  On the other hand, using the method above, if you forget to pass the info, you get an error right away.
 
 More on this issue [here](http://thepugautomatic.com/2013/05/locals/) and [here](http://therealadam.com/2014/02/09/a-tale-of-two-rails-views/), and [this slide](http://www.slideshare.net/elia.schito/rails-oo-views).
 
-This isn't necessarily the best way to do things.  As an OOP purist, you might call sharing the ivar across the conceptual boundaries of the Controller and the View a violation of encapsulation.   From what I understand, if your app is big/complicated enough to warrant this adherance to strict protocol for info exchange between object, then you do it.   Then again, some people would say anything but our simple tutorial apps are going to be complicated enough to warrant this.   In other words I don't think this is a given best practice; you go ahead and decide if its worthy.
+This isn't *necessarily* the best way to do things.  As an OOP purist, you might call sharing the ivar across the conceptual boundaries of the Controller and the View a violation of encapsulation.   From what I understand, if your app is big/complicated enough to warrant this adherance to strict protocol for info exchange between object, then you do it.   Then again, some people would say anything but our simple tutorial apps are going to be complicated enough to warrant this.   In other words I don't think this is a given best practice; you'll have to judge whether it provides value for your particular app.
 
-**Which brings us to several gems you should consider which address this, and related issues with Views in their own way** -
+**Which brings us to several View related gems that address this and other issues ...** -
 
-- [**Draper Gem**](https://github.com/drapergem/draper) - Does a good job of explaining the problem with putting logic in the view; which is another standard practice.   Of course the solution is to use this gem.
+- [**Draper Gem**](https://github.com/drapergem/draper) - Does a good job of explaining the problem with putting logic in the view; another standard practice thats frowned upon.   Of course, their solution is to use their gem and many agree.
 
 Here's a quick looksy at the problem.   Aside from the if-then logic we're used to seeing in views and partials, gems like **Can-Can** for authorization can litter your views with stuff like:
 
@@ -160,15 +157,15 @@ Here's a quick looksy at the problem.   Aside from the if-then logic we're used 
 
 So the idea is to take that logic out of the presentation layer.
 
-Here is an [article on the Decorater pattern](http://dev.af83.com/2013/06/18/cleanup-rails-s-views-with-decorators.html), and [another](http://blog.codelette.com/2014/02/16/cleaning-up-rails-view-logic-using-draper/).
+Draper gem uses the decorator pattern to address the problem.  Here is an [article on the Decorater pattern](http://dev.af83.com/2013/06/18/cleanup-rails-s-views-with-decorators.html), and [another](http://blog.codelette.com/2014/02/16/cleaning-up-rails-view-logic-using-draper/).
 
 - [**Deface Gem**](https://github.com/spree/deface) - Lets you customize Erb templates without needing to directly edit the underlying view file. Deface allows you to use standard CSS3 style selectors to target any element (including Ruby blocks), and perform an action against all the matching elements.
 
-  Example [here](http://guides.spreecommerce.com/developer/view.html)
+  Example [here](http://guides.spreecommerce.com/developer/view.html).
 
 - [**Cells gem**](https://github.com/apotonick/cells) - Provides reusable view components. Syntax looks a lot like controllers. 
 
-  Example [here](http://nerdblog.pl/2013/09/03/using-cells-in-rails/), and [here](http://nicksda.apotomo.de/2010/10/10-points-how-cells-improves-your-rails-architecture/)
+  Example [here](http://nerdblog.pl/2013/09/03/using-cells-in-rails/), and [here](http://nicksda.apotomo.de/2010/10/10-points-how-cells-improves-your-rails-architecture/).
 
 ---
 
@@ -176,13 +173,13 @@ Here is an [article on the Decorater pattern](http://dev.af83.com/2013/06/18/cle
 
 **Negative assertions in tests** can be problematic!
 
-The example ```page.should have_content("Hello BooBoo")``` passes as long as the content is there, and fails otherwise.
+A positive assertion example like ```page.should have_content("Hello BooBoo")``` passes as long as the content is there, and fails otherwise.  This is straightforward.
 
-But negative assertions like ```page.should_not have_selector(".post")``` can pass; and that may only be because you forget to update your test after you renamed your ```.post``` class to ```.article``` !
+But negative assertions like ```page.should_not have_selector(".post")``` can pass; and that may only be because you forget to update your test after you renamed your ```.post``` class to ```.article``` !  **A false positive**.
 
 What to do?
 
-- Given you have a condition that asserts the opposite, where .post should exist on the page, make them both reference a method for the definition of what it is being tested.  Now, forgetting to rename in the tests will cause both to fail.  Example:
+- In the above example, given that you have a condition that asserts the opposite where ```.post``` should exist on the page, make them both reference a method for the definition of what it is being tested.  Now, forgetting to rename in the tests will cause both to fail.  Example:
 
 ```ruby
 describe 'Home page'do
@@ -190,13 +187,13 @@ describe 'Home page'do
     before { # some precondition in which widget will exist }
 
     it "sometimes has a widget" do
-      page.should have_widget         # we define have_widget at the bottom
+      page.should have_widget         # we define have_widget method at the bottom
     end
 
   end
 
   describe "page in some condition B" do
-    before { # some condition in widget wont be there }
+    before { # some condition in which widget wont be on the page }
 
     it "sometimes doesn't have a widget" do
       page.should_not have_widget
@@ -205,7 +202,7 @@ describe 'Home page'do
 
   ...
 
-  # Tests above refer to this definition for
+  # Tests above refer to this definition for what widget refers to
   def have_widget
     have_selector(".post")
   end
@@ -215,7 +212,7 @@ end
 
 Could do the same thing with RSpec's ```let``` statement.
 
-More on this [here](http://thepugautomatic.com/2013/04/negative-assertions/)
+More on this [here](http://thepugautomatic.com/2013/04/negative-assertions/).  Should you do it this way all the time??  I doubt it.  I think more than anything this is about being clear when you can get false positives from tests that make negative assertions.
 
 ---
 
