@@ -11,8 +11,9 @@
 
 Six made it stick, but seven is from heaven.  **Welcome to week 7: Views (and more testing)**
 
+Last week we tried to do some testing, didn't get far.  This week also I wanted to spend more time on testing but I didn't get far enough to have much to present.  So this week we'll start off on some interesting material on Application servers, then talk a little about issues with views that we don't get from the tutorials.
 
-- Last week we tried to do some testing, didn't get far.
+---
 
 ### Ruby/Rails Application Servers
 
@@ -242,4 +243,35 @@ What to test:
 
   Incoming Query to the search function in general when we fill out the search box.  Rule is to assert a known output for known input.
 
-  
+Maybe we can go through this whole feature with the tests by next week!
+
+---
+
+For next week:
+
+- Finish off [The Asset Pipeline](http://www.theodinproject.com/ruby-on-rails/the-asset-pipeline), 
+do the [Project: Basic Routes, Views and Controllers](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers)
+
+  Project modification: for the second Project, instead of implementing a test app with Bootstrap, I want you to integrate [Zurb's Foundation](http://foundation.zurb.com/), or some other front-end 'framework':
+
+  [uikit](http://www.getuikit.com/)
+
+  [Gumby](http://gumbyframework.com/) dammit!
+
+  [ivory](http://weice.in/ivory/)
+
+  [kube](http://imperavi.com/kube/)
+
+  [HTML Kickstart](http://www.99lime.com/elements/)
+
+
+  *If you're looking for something to blog on, or you want to make a contribution to the community in way of a new gem or something, integrating and documenting one of the above less-well-known frameworks into Rails would be a good way to stand out among the crowd.*
+
+
+
+
+  [Foundation-Rails gem](https://github.com/zurb/foundation-rails)
+
+- See if you can finish off chpts 9 & 10 in Hartl.
+
+
