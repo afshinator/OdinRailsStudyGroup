@@ -256,7 +256,7 @@ end
 
     - **Combination** - eg) popping off a stack; *returns something, changes something*
 
-*When you approach testing your classes, think about which of these cases fit its methods.  Let's look at the different scenarios and some **general rules about how to test them** :*
+When you approach testing your classes, think about which of these cases fit its methods.  Let's look at the different scenarios and some **general rules about how to test them** :
 
 - **Incoming, Query** - Rule: Make assertions about what they send back; assert a known output for known input.  Test the interface, not the implementation.
     
