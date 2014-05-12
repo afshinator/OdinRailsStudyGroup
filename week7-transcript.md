@@ -5,7 +5,7 @@
 
 - [Study Group page on Odin](http://www.theodinproject.com/studygroup)
 
-- [Week 7 Hangout Video]()
+- [Week 7 Hangout Video](https://www.youtube.com/watch?v=b6zrBYHTxTI)
 
 ---
 
